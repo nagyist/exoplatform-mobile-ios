@@ -67,7 +67,7 @@
     _lbFileName.textColor = [UIColor grayColor];
     _lbFileName.numberOfLines = 2;
     
-    _htmlMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlMessage.userInteractionEnabled = NO;
     _htmlMessage.autoresizesSubviews = YES;
     _htmlMessage.font = [UIFont systemFontOfSize:13.0];
@@ -101,8 +101,8 @@
         case ACTIVITY_DOC:{
             html = [[[socialActivityStream.templateParams valueForKey:@"MESSAGE"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
             
-            _htmlMessage.html = html?html:@"";
-            [_htmlMessage sizeToFit];
+            [_htmlMessage setText:html?html:@""];
+            [_htmlMessage resizeLabelToFit];
             
             _lbFileName.text = [socialActivityStream.templateParams valueForKey:@"DOCNAME"];
 
@@ -124,7 +124,7 @@
             //Set the position of Title
             CGRect tmpFrame = _htmlMessage.frame;
             tmpFrame.origin.y = _lbName.frame.origin.y + _lbName.frame.size.height + 5;
-            double heigthForTTLabel = [[[self htmlMessage] text] height];
+            double heigthForTTLabel = [[self htmlMessage] optimumSize].height ;
             if (heigthForTTLabel > EXO_MAX_HEIGHT){
                 heigthForTTLabel = EXO_MAX_HEIGHT; 
             }
@@ -155,13 +155,13 @@
             
             float plfVersion = [[[NSUserDefaults standardUserDefaults] valueForKey:EXO_PREFERENCE_VERSION_SERVER] floatValue];
             if(plfVersion >= 4.0) { // in plf 4, no state in template params.
-                html = [NSString stringWithFormat:@"<a>%@</a> was created by <a>%@</a>", [socialActivityStream.templateParams valueForKey:@"contentName"], [socialActivityStream.templateParams valueForKey:@"author"]];
+                html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font> was created by <font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>", [socialActivityStream.templateParams valueForKey:@"contentName"], [socialActivityStream.templateParams valueForKey:@"author"]];
             } else {
-                html = [NSString stringWithFormat:@"<a>%@</a> was created by <a>%@</a> state: %@", [socialActivityStream.templateParams valueForKey:@"contentName"], [socialActivityStream.templateParams valueForKey:@"author"], [socialActivityStream.templateParams valueForKey:@"state"]];
+                html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font> was created by <font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font> state: %@", [socialActivityStream.templateParams valueForKey:@"contentName"], [socialActivityStream.templateParams valueForKey:@"author"], [socialActivityStream.templateParams valueForKey:@"state"]];
             }
             
-            _htmlMessage.html = [NSString stringWithFormat:@"<p>%@</p>", html?html:@""];
-            [_htmlMessage sizeToFit];
+            [_htmlMessage setText:html?html:@""];
+            [_htmlMessage resizeLabelToFit];
             
             _lbFileName.text = @"";
             [_lbFileName sizeToFit];
@@ -181,7 +181,7 @@
             //Set the position of Title
             CGRect tmpFrame = _htmlMessage.frame;
             tmpFrame.origin.y = _lbName.frame.origin.y + _lbName.frame.size.height + 5;
-            double heigthForTTLabel = [[[self htmlMessage] text] height];
+            double heigthForTTLabel = [[[self htmlMessage] text] sizeWithFont:[UIFont systemFontOfSize:13]].height;
             if (heigthForTTLabel > EXO_MAX_HEIGHT){
                 heigthForTTLabel = EXO_MAX_HEIGHT; 
             }

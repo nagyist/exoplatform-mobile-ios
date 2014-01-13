@@ -64,7 +64,7 @@
         tmpFrame = CGRectMake(70, 38, WIDTH_FOR_CONTENT_IPHONE, 21);
     }
 
-    _htmlActivityMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlActivityMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlActivityMessage.userInteractionEnabled = NO;
     _htmlActivityMessage.backgroundColor = [UIColor clearColor];
     _htmlActivityMessage.font = [UIFont systemFontOfSize:13.0];
@@ -72,7 +72,7 @@
     
     [self.contentView addSubview:_htmlActivityMessage];
     
-    _htmlLinkTitle = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlLinkTitle = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlLinkTitle.userInteractionEnabled = NO;
     _htmlLinkTitle.backgroundColor = [UIColor clearColor];
     _htmlLinkTitle.font = [UIFont systemFontOfSize:13.0];
@@ -81,7 +81,7 @@
     [self.contentView addSubview:_htmlLinkTitle];
     
     
-    _htmlLinkDescription = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlLinkDescription = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlLinkDescription.userInteractionEnabled = NO;
     _htmlLinkDescription.backgroundColor = [UIColor clearColor];
     _htmlLinkDescription.font = [UIFont systemFontOfSize:13.0];
@@ -89,7 +89,7 @@
     
     [self.contentView addSubview:_htmlLinkDescription];
     
-    _htmlLinkMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlLinkMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlLinkMessage.userInteractionEnabled = NO;
     _htmlLinkMessage.backgroundColor = [UIColor clearColor];
     _htmlLinkMessage.font = [UIFont systemFontOfSize:13.0];
@@ -120,14 +120,14 @@
     _lbName.text = title;
 
     // Activity Message
-    _htmlActivityMessage.html = [[[socialActivityStream.templateParams valueForKey:@"comment"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
+    [_htmlActivityMessage setText:[[[socialActivityStream.templateParams valueForKey:@"comment"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
     
     //SLM : Bug fix
     //When _htmlActivityMessage is empty, _htmlActivityMessage's frame is set to width:0 in sizeToFit
     //When the the view is recycle, the reuse will keep the width to 0
     // so _htmlActivityMessage will not be correctly displayed
     if (![(NSString*)[socialActivityStream.templateParams valueForKey:@"comment"] isEqualToString:@""]) {
-        [_htmlActivityMessage sizeToFit];
+        [_htmlActivityMessage resizeLabelToFit];
     } else {
         CGRect rect = _htmlActivityMessage.frame;
         rect.size.height = 0;
@@ -135,27 +135,27 @@
     }
     
     // Link Title
-    _htmlLinkTitle.html = [NSString stringWithFormat:@"<a>%@</a>", [[[socialActivityStream.templateParams valueForKey:@"title"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
+    [_htmlLinkTitle setText:[NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>", [[[socialActivityStream.templateParams valueForKey:@"title"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]]];
      
     
     // Link Message
-    _htmlLinkDescription.html = [[[socialActivityStream.templateParams valueForKey:@"description"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
+    [_htmlLinkDescription setText:[[[socialActivityStream.templateParams valueForKey:@"description"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
     
     if (![(NSString*)[socialActivityStream.templateParams valueForKey:@"description"] isEqualToString:@""]) {
-        [_htmlLinkDescription sizeToFit];
+        [_htmlLinkDescription resizeLabelToFit];
     } else {
         CGRect rect = _htmlLinkDescription.frame;
         rect.size.height = 0;
         _htmlLinkDescription.frame = rect;
     }
     
-    _htmlLinkMessage.html = [NSString stringWithFormat:@"Source : %@",[socialActivityStream.templateParams valueForKey:@"link"]];
+    [_htmlLinkMessage setText:[NSString stringWithFormat:@"Source : %@",[socialActivityStream.templateParams valueForKey:@"link"]]];
     
-    [_htmlLinkMessage sizeToFit];
+    [_htmlLinkMessage resizeLabelToFit];
     
     CGRect rect = _htmlActivityMessage.frame;
     rect.origin.y = _lbName.frame.size.height + _lbName.frame.origin.y;
-    double heigthForTTLabel = [[[self htmlActivityMessage] text] height];
+    double heigthForTTLabel = [[self htmlActivityMessage] optimumSize].height ;
     if (heigthForTTLabel > EXO_MAX_HEIGHT) heigthForTTLabel = EXO_MAX_HEIGHT;  
     rect.size.height = heigthForTTLabel;
     _htmlActivityMessage.frame = rect;
@@ -179,7 +179,7 @@
         _htmlLinkTitle.frame = rect;
         self.imgvAttach.hidden = YES;
     }
-    [_htmlLinkTitle sizeToFit];
+    [_htmlLinkTitle resizeLabelToFit];
     rect = _htmlLinkDescription.frame;
     rect.origin.y = _htmlLinkTitle.frame.size.height + _htmlLinkTitle.frame.origin.y;
     heigthForTTLabel = _htmlLinkDescription.frame.size.height;

@@ -150,6 +150,8 @@
 		3D34F8C1185FF3A9006065DE /* Icon100x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D34F8BE185FF3A9006065DE /* Icon100x100.png */; };
 		3D7E19801855AB8300CCF6A8 /* UIImage+BlankImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E197F1855AB8300CCF6A8 /* UIImage+BlankImage.m */; };
 		3D8ED7F4184DBB3F00BEA544 /* UINavigationBar+ BackButtonDisplayFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8ED7F3184DBB3E00BEA544 /* UINavigationBar+ BackButtonDisplayFix.m */; };
+		3DDEF9DD187FE0C60071358A /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDEF9DC187FE0C60071358A /* RTLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		3DDEF9DF187FE18D0071358A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDEF9DE187FE18D0071358A /* CoreText.framework */; };
 		46073660137BD27400D77DB9 /* UINavigationBar+eXoCustomIphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 4607365F137BD27400D77DB9 /* UINavigationBar+eXoCustomIphone.m */; };
 		460736E4137C2F1C00D77DB9 /* AuthenticateButtonBgStrechable.png in Resources */ = {isa = PBXBuildFile; fileRef = 460736D5137C2F1C00D77DB9 /* AuthenticateButtonBgStrechable.png */; };
 		460736E5137C2F1C00D77DB9 /* AuthenticatePanelBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 460736D6137C2F1C00D77DB9 /* AuthenticatePanelBg.png */; };
@@ -1133,6 +1135,9 @@
 		3D7E197F1855AB8300CCF6A8 /* UIImage+BlankImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlankImage.m"; sourceTree = "<group>"; };
 		3D8ED7F2184DBB3E00BEA544 /* UINavigationBar+ BackButtonDisplayFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ BackButtonDisplayFix.h"; sourceTree = "<group>"; };
 		3D8ED7F3184DBB3E00BEA544 /* UINavigationBar+ BackButtonDisplayFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ BackButtonDisplayFix.m"; sourceTree = "<group>"; };
+		3DDEF9DB187FE0C60071358A /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLabel.h; sourceTree = "<group>"; };
+		3DDEF9DC187FE0C60071358A /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
+		3DDEF9DE187FE18D0071358A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		4607365E137BD27400D77DB9 /* UINavigationBar+eXoCustomIphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+eXoCustomIphone.h"; sourceTree = "<group>"; };
 		4607365F137BD27400D77DB9 /* UINavigationBar+eXoCustomIphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+eXoCustomIphone.m"; sourceTree = "<group>"; };
 		460736D5137C2F1C00D77DB9 /* AuthenticateButtonBgStrechable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AuthenticateButtonBgStrechable.png; sourceTree = "<group>"; };
@@ -1902,6 +1907,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDEF9DF187FE18D0071358A /* CoreText.framework in Frameworks */,
 				46F6344414549DBC00BB57D4 /* libRestKitCoreData.a in Frameworks */,
 				46F6344514549DBC00BB57D4 /* libRestKitJSONParserJSONKit.a in Frameworks */,
 				46F6344614549DBC00BB57D4 /* libRestKitNetwork.a in Frameworks */,
@@ -2168,6 +2174,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DDEF9DE187FE18D0071358A /* CoreText.framework */,
 				466FD6FC148E5BF5005A1B78 /* Crashlytics.framework */,
 				7CEA558713C54CAF00FCB43A /* RestKit.xcodeproj */,
 				3201088596B4756681693700 /* Three20UICommon.xcodeproj */,
@@ -2253,6 +2260,15 @@
 				7CFD408B136131A400DD86E8 /* UIUnitTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3DDEF9C9187FE08F0071358A /* RTLabel */ = {
+			isa = PBXGroup;
+			children = (
+				3DDEF9DB187FE0C60071358A /* RTLabel.h */,
+				3DDEF9DC187FE0C60071358A /* RTLabel.m */,
+			);
+			name = RTLabel;
 			sourceTree = "<group>";
 		};
 		460736D3137C2F1C00D77DB9 /* Authenticate */ = {
@@ -3997,6 +4013,7 @@
 		894734A01337139800B0AD11 /* 3-part */ = {
 			isa = PBXGroup;
 			children = (
+				3DDEF9C9187FE08F0071358A /* RTLabel */,
 				A6BD12CD158B4A4D00D6A058 /* Logging.h */,
 				A69B0481157F0DCF003DDFDF /* JMTabView */,
 				8958E65514A9B7D300580EEB /* TouchXml */,
@@ -5220,6 +5237,7 @@
 				46EA0E8B1472641500F42855 /* JTTableViewDatasource.m in Sources */,
 				46EA0E8E147264B100F42855 /* HomeSidebarViewController_iPhone.m in Sources */,
 				1FCCC2F91474AE00000F03F4 /* eXoFullScreenView.m in Sources */,
+				3DDEF9DD187FE0C60071358A /* RTLabel.m in Sources */,
 				1FC3453B1474FD3600540016 /* ActivityAnswerDetailMessageTableViewCell.m in Sources */,
 				1FCF4A491476413E00EEB9C7 /* ActivityLinkDetailMessageTableViewCell.m in Sources */,
 				1FCC6FF1147A5C7A00BBB64F /* ActivityCalendarTableViewCell.m in Sources */,

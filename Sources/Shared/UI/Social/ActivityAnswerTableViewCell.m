@@ -56,19 +56,19 @@
     }
     
     //Use an html styled label to display informations about the author of the wiki page
-    _htmlName = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlName = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlName.userInteractionEnabled = NO;
     _htmlName.backgroundColor = [UIColor clearColor];
     _htmlName.font = [UIFont systemFontOfSize:13.0];
     [self.contentView addSubview:_htmlName];
     
-    _htmlTitle = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlTitle = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlTitle.userInteractionEnabled = NO;
     _htmlTitle.backgroundColor = [UIColor clearColor];
     _htmlTitle.font = [UIFont systemFontOfSize:13.0];
     [self.contentView addSubview:_htmlTitle];
     
-    _lbMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _lbMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _lbMessage.userInteractionEnabled = NO;
     _lbMessage.backgroundColor = [UIColor clearColor];
     _lbMessage.font = [UIFont systemFontOfSize:13.0];
@@ -84,39 +84,39 @@
     if([type isEqualToString:STREAM_TYPE_SPACE]) {
         space = [socialActivityStream.activityStream valueForKey:@"fullName"];
     }
+    NSString *htmlStr;
     switch (socialActivityStream.activityType) {
         case ACTIVITY_ANSWER_ADD_QUESTION:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName,  space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Asked")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName,  space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Asked")];
             break;
         case ACTIVITY_ANSWER_QUESTION:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName,  space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Answered")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName,  space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Answered")];
             break; 
         case ACTIVITY_ANSWER_UPDATE_QUESTION:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName,  space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdateQuestion")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName,  space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdateQuestion")];
             break; 
         default:
             break;
     }
-    
-    [_htmlName sizeToFit];
+    [_htmlName setText:htmlStr];
+    [_htmlName resizeLabelToFit];
     
     //Set the position of Title
     float plfVersion = [[[NSUserDefaults standardUserDefaults] valueForKey:EXO_PREFERENCE_VERSION_SERVER] floatValue];
     // in plf 4, no Name in template params, it's the title of ActivityStream
     NSString *title = plfVersion >= 4.0 ? socialActivityStream.title : [socialActivityStream.templateParams valueForKey:@"Name"];
     
-    _htmlTitle.html = [NSString stringWithFormat:@"<a>%@</a>", [[title stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
+    [_htmlTitle setText:[NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>", [[title stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]]];
+    [_htmlTitle resizeLabelToFit];
     
-    [_htmlTitle sizeToFit];
-    
-    _lbMessage.html = [[socialActivityStream.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
-    [_lbMessage sizeToFit];
+    [_lbMessage setText:[[socialActivityStream.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
+    [_lbMessage resizeLabelToFit];
     
     
     // for title
     CGRect tmpFrame = _htmlTitle.frame;
     tmpFrame.origin.y = _htmlName.frame.origin.y + _htmlName.frame.size.height + 5;
-    double heigthForTTLabel = [[[self htmlTitle] text] height];
+    double heigthForTTLabel = [[self htmlTitle] optimumSize].height;
     if (heigthForTTLabel > EXO_MAX_HEIGHT) heigthForTTLabel = EXO_MAX_HEIGHT;  
     tmpFrame.size.height = heigthForTTLabel;
     _htmlTitle.frame = tmpFrame;
@@ -125,7 +125,7 @@
     //Set the position of lbMessage
     tmpFrame = _lbMessage.frame;
     tmpFrame.origin.y = _htmlTitle.frame.origin.y + _htmlTitle.frame.size.height + 5;
-    heigthForTTLabel = [[[self lbMessage] text] height];
+    heigthForTTLabel = [[self lbMessage] optimumSize].height;
     if (heigthForTTLabel > EXO_MAX_HEIGHT) heigthForTTLabel = EXO_MAX_HEIGHT;  
     tmpFrame.size.height = heigthForTTLabel;
     _lbMessage.frame = tmpFrame;

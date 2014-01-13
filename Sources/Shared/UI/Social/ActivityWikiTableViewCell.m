@@ -59,20 +59,20 @@
     }
     
     //Use an html styled label to display informations about the author of the wiki page
-    _htmlName = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlName = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlName.userInteractionEnabled = NO;
     _htmlName.backgroundColor = [UIColor clearColor];
     _htmlName.font = [UIFont systemFontOfSize:13.0];
     [self.contentView addSubview:_htmlName];
     
-    _lbTitle = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _lbTitle = [[RTLabel alloc] initWithFrame:tmpFrame];
     _lbTitle.userInteractionEnabled = NO;
     _lbTitle.backgroundColor = [UIColor clearColor];
     _lbTitle.font = [UIFont systemFontOfSize:13.0];
     [self.contentView addSubview:_lbTitle];
     
     
-    _lbMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _lbMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _lbMessage.userInteractionEnabled = NO;
     _lbMessage.backgroundColor = [UIColor clearColor];
     _lbMessage.font = [UIFont systemFontOfSize:13.0];
@@ -85,9 +85,10 @@
     if([type isEqualToString:STREAM_TYPE_SPACE]) {
         space = [socialActivityStream.activityStream valueForKey:@"fullName"];
     }
+    NSString *htmlStr;
     switch (socialActivityStream.activityType) {
         case ACTIVITY_WIKI_MODIFY_PAGE:{
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", 
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@",
                              socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",
                              Localize(@"EditWiki")];
             
@@ -95,7 +96,7 @@
             break;
         case ACTIVITY_WIKI_ADD_PAGE:
         {
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", 
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@",
                               socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",
                               Localize(@"CreateWiki")];
         }
@@ -104,13 +105,14 @@
         default:
             break;
     }
-    [_htmlName sizeToFit];
+    [_htmlName setText:htmlStr];
+    [_htmlName resizeLabelToFit];
 
-    _lbTitle.html = [NSString stringWithFormat:@"<a>%@</a>", [[[socialActivityStream.templateParams valueForKey:@"page_name"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
-    [_lbTitle sizeToFit];
+    [_lbTitle setText:[NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>", [[[socialActivityStream.templateParams valueForKey:@"page_name"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]]];
+    [_lbTitle resizeLabelToFit];
     
-    _lbMessage.html =  [[[socialActivityStream.templateParams valueForKey:@"page_exceprt"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
-    [_lbMessage sizeToFit];
+    [_lbMessage setText:[[[socialActivityStream.templateParams valueForKey:@"page_exceprt"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
+    [_lbMessage resizeLabelToFit];
 
     
     //Set the position of Title
@@ -118,9 +120,9 @@
     tmpFrame.origin.y = _htmlName.frame.origin.y + _htmlName.frame.size.height + 5;
     tmpFrame.size.width = _htmlName.frame.size.width;
     
-    double heigthForTTLabel = [[[self lbTitle] text] height];
+    double heigthForTTLabel = [[self lbTitle] optimumSize].height;
     if (heigthForTTLabel > MAX_LENGTH)
-        heigthForTTLabel = MAX_LENGTH;  // Do not exceed the maximum height for the TTStyledTextLabel.
+        heigthForTTLabel = MAX_LENGTH ;  // Do not exceed the maximum height for the TTStyledTextLabel.
     // The Text was supposed to clip here when maximum height is set!**
     tmpFrame.size.height = heigthForTTLabel;
     _lbTitle.frame = tmpFrame;
@@ -128,9 +130,9 @@
     tmpFrame = _lbMessage.frame;
     tmpFrame.origin.y = _lbTitle.frame.origin.y + _lbTitle.frame.size.height + 5;
     tmpFrame.size.width = _lbTitle.frame.size.width;
-    heigthForTTLabel = [[[self lbMessage] text] height];
+    heigthForTTLabel = [[self lbMessage] optimumSize].height;
     if (heigthForTTLabel > MAX_LENGTH)
-        heigthForTTLabel = MAX_LENGTH;  // Do not exceed the maximum height for the TTStyledTextLabel.
+        heigthForTTLabel = MAX_LENGTH ;  // Do not exceed the maximum height for the TTStyledTextLabel.
     // The Text was supposed to clip here when maximum height is set!**
     tmpFrame.size.height = heigthForTTLabel;
     _lbMessage.frame = tmpFrame;

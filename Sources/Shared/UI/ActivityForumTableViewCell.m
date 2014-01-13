@@ -57,20 +57,20 @@
     }
     
     //Use an html styled label to display informations about the author of the wiki page
-    _htmlName = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlName = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlName.userInteractionEnabled = NO;
     _htmlName.backgroundColor = [UIColor clearColor];
     _htmlName.font = [UIFont systemFontOfSize:13.0];
     [self.contentView addSubview:_htmlName];
     
     //Use an html styled label to display informations about the author of the wiki page
-    _lbTitle = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _lbTitle = [[RTLabel alloc] initWithFrame:tmpFrame];
     _lbTitle.userInteractionEnabled = NO;
     _lbTitle.backgroundColor = [UIColor clearColor];
     _lbTitle.font = [UIFont systemFontOfSize:13.0];
     [self.contentView addSubview:_lbTitle];
     
-    _lbMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _lbMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _lbMessage.userInteractionEnabled = NO;
     _lbMessage.backgroundColor = [UIColor clearColor];
     _lbMessage.font = [UIFont systemFontOfSize:13.0];
@@ -87,47 +87,48 @@
     if([type isEqualToString:STREAM_TYPE_SPACE]) {
         space = [socialActivityStream.activityStream valueForKey:@"fullName"];
     }
+    NSString *htmlStr;
     switch (socialActivityStream.activityType) {
         case ACTIVITY_FORUM_CREATE_POST:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"NewPost")];
-            html = [NSString stringWithFormat:@"<a>%@</a>", 
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"NewPost")];
+            html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>",
                              [[[socialActivityStream.templateParams valueForKey:@"PostName"] stringByEncodeWithHTML] stringByConvertingHTMLToPlainText]];
             break;
         case ACTIVITY_FORUM_CREATE_TOPIC:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"NewTopic")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"NewTopic")];
             
             float plfVersion = [[[NSUserDefaults standardUserDefaults] stringForKey:EXO_PREFERENCE_VERSION_SERVER] floatValue];
             
             if(plfVersion >= 4.0) { // plf 4 and later: TopicName is not in template params, it is title of socialActivityStream
-                html = [NSString stringWithFormat:@"<a>%@</a>",
+                html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>",
                         [[socialActivityStream.title stringByEncodeWithHTML] stringByConvertingHTMLToPlainText]];
             } else {
-                html = [NSString stringWithFormat:@"<a>%@</a>",
+                html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>",
                         [[[socialActivityStream.templateParams valueForKey:@"TopicName" ] stringByEncodeWithHTML] stringByConvertingHTMLToPlainText]];
             }
             
             break;
         case ACTIVITY_FORUM_UPDATE_TOPIC:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"UpdateTopic")];
-            html = [NSString stringWithFormat:@"<a>%@</a>", 
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"UpdateTopic")];
+            html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>",
                              [[[socialActivityStream.templateParams valueForKey:@"TopicName"] stringByEncodeWithHTML] stringByConvertingHTMLToPlainText]];
             break; 
         case ACTIVITY_FORUM_UPDATE_POST:
-            _htmlName.html = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"UpdatePost")];
-            html = [NSString stringWithFormat:@"<a>%@</a>", 
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityStream.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"UpdatePost")];
+            html = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>", 
                              [[[socialActivityStream.templateParams valueForKey:@"PostName"] stringByEncodeWithHTML] stringByConvertingHTMLToPlainText]];
             break; 
         default:
             break;
     }
+    [_htmlName setText:htmlStr];
+    [_htmlName resizeLabelToFit];
     
-    [_htmlName sizeToFit];
+    [_lbTitle setText:html];
+    [_lbTitle resizeLabelToFit];
     
-    _lbTitle.html = html;
-    [_lbTitle sizeToFit];
-    
-    _lbMessage.html = [[socialActivityStream.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
-    [_lbMessage sizeToFit];
+    [_lbMessage setText:[[socialActivityStream.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
+    [_lbMessage resizeLabelToFit];
 
     //Set the position of Title
     CGRect tmpFrame = _lbTitle.frame;
@@ -138,7 +139,7 @@
     //Set the position of lbMessage
     tmpFrame = _lbMessage.frame;
     tmpFrame.origin.y = _lbTitle.frame.origin.y + _lbTitle.frame.size.height + 5;
-    double heigthForTTLabel = [[[self lbMessage] text] height];
+    double heigthForTTLabel = [[self lbMessage] optimumSize].height ;
     if (heigthForTTLabel > EXO_MAX_HEIGHT){
         heigthForTTLabel = EXO_MAX_HEIGHT; 
     }

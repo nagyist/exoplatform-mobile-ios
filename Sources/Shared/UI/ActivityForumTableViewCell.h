@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "ActivityBasicTableViewCell.h"
-#import "Three20/Three20.h"
+
 
 @interface ActivityForumTableViewCell : ActivityBasicTableViewCell {
 
     
-    TTStyledTextLabel*                       _lbMessage;
-    TTStyledTextLabel*                      _htmlName;
-    TTStyledTextLabel*                      _lbTitle;
+    RTLabel*                       _lbMessage;
+    RTLabel*                      _htmlName;
+    RTLabel*                      _lbTitle;
     
 }
-@property (retain, nonatomic) TTStyledTextLabel* lbTitle;
-@property (retain, nonatomic) TTStyledTextLabel* lbMessage;
-@property (retain, nonatomic) TTStyledTextLabel* htmlName;
+@property (retain, nonatomic) RTLabel* lbTitle;
+@property (retain, nonatomic) RTLabel* lbMessage;
+@property (retain, nonatomic) RTLabel* htmlName;
 
 
 @end

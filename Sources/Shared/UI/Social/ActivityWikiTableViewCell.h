@@ -13,15 +13,15 @@
 
 @interface ActivityWikiTableViewCell : ActivityBasicTableViewCell {
 
-    TTStyledTextLabel*                      _lbMessage;
-    TTStyledTextLabel*                      _lbTitle;
-    TTStyledTextLabel*                      _htmlName;
+    RTLabel*                      _lbMessage;
+    RTLabel*                      _lbTitle;
+    RTLabel*                      _htmlName;
 }
 
 
-@property (retain, nonatomic) TTStyledTextLabel* lbMessage;
-@property (retain, nonatomic) TTStyledTextLabel* htmlName;
-@property (retain, nonatomic) TTStyledTextLabel* lbTitle;
+@property (retain, nonatomic) RTLabel* lbMessage;
+@property (retain, nonatomic) RTLabel* htmlName;
+@property (retain, nonatomic) RTLabel* lbTitle;
 
 
 

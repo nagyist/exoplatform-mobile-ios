@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Three20/Three20.h"
 #import "defines.h"
 #import "AvatarView.h"
+#import "RTLabel.h"
 
 @class Activity;
 @class SocialActivity;
@@ -32,7 +32,7 @@
     ActivityStreamBrowseViewController*     _delegate;
     NSInteger                               _activityType;
     
-    TTStyledTextLabel*                      _htmlMessage;
+    RTLabel*                      _htmlMessage;
 }
 
 @property (retain, nonatomic) IBOutlet AvatarView *imgvAvatar;
@@ -45,7 +45,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView*  imgType;
 @property (retain, nonatomic) IBOutlet UILabel* lbDate;
 @property (retain, nonatomic) IBOutlet UILabel* lbName;
-@property (retain, nonatomic) TTStyledTextLabel   *htmlMessage;
+@property (retain, nonatomic) RTLabel   *htmlMessage;
 
 @property NSInteger activityType;
 

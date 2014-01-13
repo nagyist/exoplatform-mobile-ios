@@ -12,19 +12,19 @@
 @interface ActivityLinkTableViewCell : ActivityBasicTableViewCell {
  
     EGOImageView*          _imgvAttach;
-    TTStyledTextLabel*     _htmlActivityMessage;
-    TTStyledTextLabel*     _htmlLinkTitle;
-    TTStyledTextLabel*     _htmlLinkDescription;
-    TTStyledTextLabel*     _htmlName;
-    TTStyledTextLabel*     _htmlLinkMessage;
+    RTLabel*     _htmlActivityMessage;
+    RTLabel*     _htmlLinkTitle;
+    RTLabel*     _htmlLinkDescription;
+    RTLabel*     _htmlName;
+    RTLabel*     _htmlLinkMessage;
     CGFloat width;
 }
 
 @property (retain) IBOutlet EGOImageView* imgvAttach;
-@property (retain, nonatomic) TTStyledTextLabel* htmlActivityMessage;
-@property (retain, nonatomic) TTStyledTextLabel* htmlLinkTitle;
-@property (retain, nonatomic) TTStyledTextLabel* htmlLinkDescription;
-@property (retain, nonatomic) TTStyledTextLabel* htmlName;
-@property (retain, nonatomic) TTStyledTextLabel* htmlLinkMessage;
+@property (retain, nonatomic) RTLabel* htmlActivityMessage;
+@property (retain, nonatomic) RTLabel* htmlLinkTitle;
+@property (retain, nonatomic) RTLabel* htmlLinkDescription;
+@property (retain, nonatomic) RTLabel* htmlName;
+@property (retain, nonatomic) RTLabel* htmlLinkMessage;
 
 @end

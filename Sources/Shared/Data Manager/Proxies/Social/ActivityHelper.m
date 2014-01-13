@@ -343,7 +343,7 @@
                 if(h > EXO_MAX_HEIGHT){
                     h = EXO_MAX_HEIGHT;
                 }
-                fHeight += h - 25;
+                fHeight += h ;
             }
         }
             break;

@@ -184,7 +184,7 @@
         tmpFrame = CGRectMake(70, 38, WIDTH_FOR_CONTENT_IPHONE, 21);
     }
     
-    _htmlMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
 
     
     _htmlMessage.userInteractionEnabled = NO;
@@ -253,7 +253,7 @@
 
 - (void)setSocialActivityStreamForSpecificContent:(SocialActivity *)socialActivityStream {
  
-    _htmlMessage.html = socialActivityStream.title;
+    [_htmlMessage setText:socialActivityStream.title];
     //_htmlMessage.text = [TTStyledText textFromXHTML:socialActivityStream.title];
 
     _lbName.text = [socialActivityStream.posterIdentity.fullName copy];
