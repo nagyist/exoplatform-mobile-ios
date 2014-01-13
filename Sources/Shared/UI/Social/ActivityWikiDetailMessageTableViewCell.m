@@ -27,14 +27,14 @@
         width = WIDTH_FOR_CONTENT_IPHONE;
     }
     
-    _htmlName = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlName = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlName.userInteractionEnabled = NO;
     _htmlName.backgroundColor = [UIColor clearColor];
     _htmlName.font = [UIFont systemFontOfSize:13.0];
     _htmlName.textColor = [UIColor grayColor];
     [self.contentView addSubview:_htmlName];
     
-    _htmlMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlMessage.userInteractionEnabled = NO;
     _htmlMessage.backgroundColor = [UIColor clearColor];
     _htmlMessage.font = [UIFont systemFontOfSize:13.0];
@@ -64,17 +64,17 @@
     NSDictionary *_templateParams = self.socialActivity.templateParams;
     switch (self.socialActivity.activityType) {
         case ACTIVITY_WIKI_ADD_PAGE:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"CreateWiki")];         
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"CreateWiki")];
         }
             break;
         case ACTIVITY_WIKI_MODIFY_PAGE:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"EditWiki")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"EditWiki")];
         }
             break;
     }
     // Name
-    _htmlName.html = htmlStr;
-    [_htmlName sizeToFit];
+    [_htmlName setText:htmlStr];
+    [_htmlName resizeLabelToFit];
     
     CGRect tmpFrame = _htmlName.frame;
     tmpFrame.origin.y = 5;
@@ -94,8 +94,8 @@
     tmpFrame.size.height = theSize.height + 10;
     _webViewForContent.frame = tmpFrame;
     
-    _htmlMessage.html = [NSString stringWithFormat:@"<p>%@</p>", [[[_templateParams valueForKey:@"page_exceprt"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
-    [_htmlMessage sizeToFit];
+    [_htmlMessage setText:[NSString stringWithFormat:@"%@", [[[_templateParams valueForKey:@"page_exceprt"] stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]]] ;
+    [_htmlMessage resizeLabelToFit];
     [_webViewForContent sizeToFit];
     
     [self updateSizeToFitSubViews];

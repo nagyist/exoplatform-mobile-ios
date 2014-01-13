@@ -29,7 +29,7 @@
         width = WIDTH_FOR_CONTENT_IPHONE;
     }
     
-    _htmlName = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlName = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlName.userInteractionEnabled = NO;
     _htmlName.backgroundColor = [UIColor clearColor];
     _htmlName.font = [UIFont systemFontOfSize:13.0];
@@ -37,7 +37,7 @@
     
     [self.contentView addSubview:_htmlName];
     
-    _htmlMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlMessage.userInteractionEnabled = NO;
     _htmlMessage.backgroundColor = [UIColor clearColor];
     _htmlMessage.font = [UIFont systemFontOfSize:13.0];
@@ -71,7 +71,7 @@
     switch (self.socialActivity.activityType) {
         case ACTIVITY_FORUM_CREATE_TOPIC:{
            
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"NewTopic")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"NewTopic")];
                         
             
             float plfVersion = [[[NSUserDefaults standardUserDefaults] valueForKey:EXO_PREFERENCE_VERSION_SERVER] floatValue];
@@ -91,7 +91,7 @@
         }
             break;
         case ACTIVITY_FORUM_CREATE_POST:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"NewPost")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"", Localize(@"NewPost")];
 
             [_webViewForContent loadHTMLString:[NSString stringWithFormat:@"<html><head><style>body{background-color:transparent;color:#808080;font-family:\"Helvetica\";font-size:13;word-wrap: break-word;} a:link{color: #115EAD; text-decoration: none; font-weight: bold;} a{color: #115EAD; text-decoration: none; font-weight: bold;}</style> </head><a href=\"%@\">%@</a></body></html>",[_templateParams valueForKey:@"PostLink"],[_templateParams valueForKey:@"PostName"]]
                                        baseURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:EXO_PREFERENCE_DOMAIN]]
@@ -101,7 +101,7 @@
             
             break; 
         case ACTIVITY_FORUM_UPDATE_POST:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdatePost")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdatePost")];
             [_webViewForContent loadHTMLString:[NSString stringWithFormat:@"<html><head><style>body{background-color:transparent;color:#808080;font-family:\"Helvetica\";font-size:13;word-wrap: break-word;} a:link{color: #115EAD; text-decoration: none; font-weight: bold;} a{color: #115EAD; text-decoration: none; font-weight: bold;}</style> </head><body><a href=\"%@\">%@</a></body></html>", [_templateParams valueForKey:@"PostLink"],[[_templateParams valueForKey:@"PostName"] stringByConvertingHTMLToPlainText]]
                                        baseURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:EXO_PREFERENCE_DOMAIN]]
              ];
@@ -110,7 +110,7 @@
             
             break;
         case ACTIVITY_FORUM_UPDATE_TOPIC:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdateTopic")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdateTopic")];
             [_webViewForContent loadHTMLString:[NSString stringWithFormat:@"<html><head><style>body{background-color:transparent;color:#808080;font-family:\"Helvetica\";font-size:13;word-wrap: break-word;} a:link{color: #115EAD; text-decoration: none; font-weight: bold;} a{color: #115EAD; text-decoration: none; font-weight: bold;}</style> </head><body><a href=\"%@\">%@</a></body></html>", [_templateParams valueForKey:@"TopicLink"],[[_templateParams valueForKey:@"TopicName"] stringByConvertingHTMLToPlainText]]
                                        baseURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults] valueForKey:EXO_PREFERENCE_DOMAIN]]
              ];
@@ -119,10 +119,10 @@
             break;
     }
     // Name
-    _htmlName.html = htmlStr;
-    [_htmlName sizeToFit];
+    [_htmlName setText:htmlStr];
+    [_htmlName resizeLabelToFit];
     
-    _htmlMessage.html = [[socialActivityDetail.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
+    [_htmlMessage setText:[[socialActivityDetail.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]] ;
     
     
     CGRect tmpFrame = _htmlName.frame;

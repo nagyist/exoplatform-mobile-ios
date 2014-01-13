@@ -11,11 +11,11 @@
 
 @interface ActivityForumDetailMessageTableViewCell : ActivityDetailMessageTableViewCell{
     
-    TTStyledTextLabel*                      _htmlName;
-    TTStyledTextLabel*                      _htmlMessage;
+    RTLabel*                      _htmlName;
+    RTLabel*                      _htmlMessage;
     
     CGFloat width;
 }
-@property (retain, nonatomic) TTStyledTextLabel* htmlMessage;
-@property (retain, nonatomic) TTStyledTextLabel* htmlName;
+@property (retain, nonatomic) RTLabel* htmlMessage;
+@property (retain, nonatomic) RTLabel* htmlName;
 @end

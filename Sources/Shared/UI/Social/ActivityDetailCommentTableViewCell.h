@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Three20/Three20.h"
+#import "RTLabel.h"
 
 @class Activity;
 @class EGOImageView;
@@ -24,7 +24,7 @@
     UIImageView*           _imgvMessageBg;
     UIImageView*           _imgvCellBg;
     
-    TTStyledTextLabel  *htmlLabel;
+    RTLabel  *htmlLabel;
     UIWebView*             _webViewForContent;
     
 }

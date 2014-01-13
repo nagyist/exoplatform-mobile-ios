@@ -28,14 +28,14 @@
         tmpFrame = CGRectMake(67, 0, WIDTH_FOR_CONTENT_IPHONE , 21);
         width = WIDTH_FOR_CONTENT_IPHONE;
     }
-    _htmlName = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlName = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlName.userInteractionEnabled = NO;
     _htmlName.backgroundColor = [UIColor clearColor];
     _htmlName.font = [UIFont systemFontOfSize:13.0];
     _htmlName.textColor = [UIColor grayColor];
     [self.contentView addSubview:_htmlName];
     
-    _htmlMessage = [[TTStyledTextLabel alloc] initWithFrame:tmpFrame];
+    _htmlMessage = [[RTLabel alloc] initWithFrame:tmpFrame];
     _htmlMessage.userInteractionEnabled = NO;
     _htmlMessage.backgroundColor = [UIColor clearColor];
     _htmlMessage.font = [UIFont systemFontOfSize:13.0];
@@ -67,21 +67,21 @@
     NSDictionary *_templateParams = self.socialActivity.templateParams;
     switch (self.socialActivity.activityType) {
         case ACTIVITY_ANSWER_ADD_QUESTION:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Asked")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Asked")];
         }
             break;
         case ACTIVITY_ANSWER_QUESTION:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Answered")];
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"Answered")];
         }
             break;
         case ACTIVITY_ANSWER_UPDATE_QUESTION:{
-            htmlStr = [NSString stringWithFormat:@"<p><a>%@%@</a> %@</p>", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdateQuestion")]; 
+            htmlStr = [NSString stringWithFormat:@"<font face='Helvetica' size=13 color='#115EAD'><b>%@%@</b></font> %@", socialActivityDetail.posterIdentity.fullName, space ? [NSString stringWithFormat:@" in %@ space", space] : @"",Localize(@"UpdateQuestion")];
         }
             break;
     }
     // Name
-    _htmlName.html = htmlStr;
-    [_htmlName sizeToFit];
+    [_htmlName setText:htmlStr];
+    [_htmlName resizeLabelToFit];
     
     CGRect tmpFrame = _htmlName.frame;
     tmpFrame.origin.y = 5;
@@ -109,9 +109,9 @@
     tmpFrame.size.height = theSize.height + 5;
     _webViewForContent.frame = tmpFrame;
     
-    _htmlMessage.html = [[socialActivityDetail.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML];
+    [_htmlMessage setText:[[socialActivityDetail.body stringByConvertingHTMLToPlainText] stringByEncodeWithHTML]];
     
-    [_htmlMessage sizeToFit];
+    [_htmlMessage resizeLabelToFit];
     
     [_webViewForContent sizeToFit];
     [self updateSizeToFitSubViews];

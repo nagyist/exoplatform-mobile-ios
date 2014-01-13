@@ -149,7 +149,7 @@
         _htmlLinkDescription.frame = rect;
     }
     
-    [_htmlLinkMessage setText:[NSString stringWithFormat:@"Source : %@",[socialActivityStream.templateParams valueForKey:@"link"]]];
+    [_htmlLinkMessage setText:[NSString stringWithFormat:@"Source : <font face='Helvetica' size=13 color='#115EAD'><b>%@</b></font>",[socialActivityStream.templateParams valueForKey:@"link"]]];
     
     [_htmlLinkMessage resizeLabelToFit];
     

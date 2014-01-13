@@ -11,15 +11,15 @@
 
 @interface ActivityLinkDetailMessageTableViewCell : ActivityDetailMessageTableViewCell{
 
-    TTStyledTextLabel*      _htmlLinkTitle;
-    TTStyledTextLabel*     _htmlLinkMessage;
-    TTStyledTextLabel*     _htmlActivityMessage;
+    RTLabel*      _htmlLinkTitle;
+    RTLabel*     _htmlLinkMessage;
+    RTLabel*     _htmlActivityMessage;
     
     CGFloat width;
 }
-@property (retain, nonatomic) TTStyledTextLabel* htmlActivityMessage;
-@property (retain, nonatomic) TTStyledTextLabel* htmlLinkTitle;
-@property (retain, nonatomic) TTStyledTextLabel* htmlLinkMessage;
+@property (retain, nonatomic) RTLabel* htmlActivityMessage;
+@property (retain, nonatomic) RTLabel* htmlLinkTitle;
+@property (retain, nonatomic) RTLabel* htmlLinkMessage;
 - (void)configureCellForSpecificContentWithWidth:(CGFloat)fWidth;
 
 @end

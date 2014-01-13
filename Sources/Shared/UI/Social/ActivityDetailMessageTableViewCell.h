@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Three20/Three20.h"
+#import "RTLabel.h"
 #import "defines.h"
 
 #define kBottomMargin 5.0
@@ -33,7 +33,7 @@
     UIWebView*             _webViewForContent;
     UIWebView   *          _webViewComment;
     
-    TTStyledTextLabel*     htmlLabel;
+    RTLabel*     htmlLabel;
 }
 
 @property (nonatomic, retain) SocialActivity *socialActivity;

@@ -10,11 +10,11 @@
 #import "ActivityDetailMessageTableViewCell.h"
 
 @interface ActivityWikiDetailMessageTableViewCell : ActivityDetailMessageTableViewCell{
-    TTStyledTextLabel*                      _htmlMessage;
-    TTStyledTextLabel*                      _htmlName;
+    RTLabel*                      _htmlMessage;
+    RTLabel*                      _htmlName;
     
     CGFloat width;
 }
-@property (retain, nonatomic) TTStyledTextLabel* htmlMessage;
-@property (retain, nonatomic) TTStyledTextLabel* htmlName;
+@property (retain, nonatomic) RTLabel* htmlMessage;
+@property (retain, nonatomic) RTLabel* htmlName;
 @end
