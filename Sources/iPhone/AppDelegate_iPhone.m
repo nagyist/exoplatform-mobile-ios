@@ -10,7 +10,6 @@
 
 #import "defines.h"
 #import "FilesProxy.h"
-#import "HomeStyleSheet.h"
 #import <Crashlytics/Crashlytics.h>
 #import "UserPreferencesManager.h"
 #import "WelcomeViewController_iPhone.h"
@@ -110,7 +109,7 @@
 
 - (void)showHomeSidebarViewController {
     // Login is successfully
-    [TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
+    //[TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
 
     
     [[FilesProxy sharedInstance] creatUserRepositoryHomeUrl];
@@ -129,7 +128,7 @@
 - (void)showHomeViewController {
     // Login is successfully
     
-    [TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
+    //[TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
 
     
     [[FilesProxy sharedInstance] creatUserRepositoryHomeUrl];

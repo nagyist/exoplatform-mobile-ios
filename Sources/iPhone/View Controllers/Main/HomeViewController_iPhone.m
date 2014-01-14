@@ -8,19 +8,6 @@
 
 #import "HomeViewController_iPhone.h"
 
-#import "Three20UI/UINSStringAdditions.h"
-
-// Core
-#import "Three20Core/TTCorePreprocessorMacros.h"
-
-// UI
-#import "Three20UI/TTNavigator.h"
-
-// UINavigator
-#import "Three20UINavigator/TTURLAction.h"
-#import "Three20UINavigator/TTURLMap.h"
-#import "Three20UINavigator/TTURLObject.h"
-
 #import "DocumentsViewController_iPhone.h"
 #import "ActivityStreamBrowseViewController_iPhone.h"
 #import "DashboardViewController_iPhone.h"
@@ -116,36 +103,12 @@
         [_launcherView release];
     }
     
-    _launcherView = [[TTLauncherView alloc] initWithFrame:CGRectMake(0,5,self.view.frame.size.width, self.view.frame.size.height-120)];
+    _launcherView = [[UITableView alloc] initWithFrame:CGRectMake(0,5,self.view.frame.size.width, self.view.frame.size.height-120)];
     
     _launcherView.backgroundColor = [UIColor clearColor];
     _launcherView.delegate = self;
-    _launcherView.columnCount = 3;
-    _launcherView.pager.hidesForSinglePage = YES;
-
+    _launcherView.dataSource = self;
     
-    //TODO Localize
-    TTLauncherItem *actStreamItem = [[[TTLauncherItem alloc] initWithTitle:Localize(@"News")
-                                                                     image:@"bundle://HomeActivityStreamsIconiPhone.png"
-                                                                       URL:@"tt://activityStream" canDelete:NO] autorelease];
-
-    
-    TTLauncherItem *documentItem = [[[TTLauncherItem alloc] initWithTitle:Localize(@"Documents")
-                                                                    image:@"bundle://HomeDocumentsIconiPhone.png"
-                                                                      URL:@"tt://documents" canDelete:NO] autorelease];
-    
-    TTLauncherItem *dashboardItem = [[[TTLauncherItem alloc] initWithTitle:Localize(@"Dashboard")
-                                                                     image:@"bundle://HomeDashboardIconiPhone.png"
-                                                                       URL:@"tt://dashboard" canDelete:NO] autorelease];
-    
-    TTLauncherItem *settingItem = [[[TTLauncherItem alloc] initWithTitle:Localize(@"Settings")
-                                                                   image:@"bundle://HomeSettingsIconiPhone.png"
-                                                                     URL:@"tt://setting" canDelete:NO] autorelease];
-    if(_isCompatibleWithSocial)
-        _launcherView.pages = [NSArray arrayWithObjects:[NSArray arrayWithObjects:
-                                                         actStreamItem, documentItem, dashboardItem, settingItem, nil], nil];
-    else
-        _launcherView.pages = [NSArray arrayWithObjects:[NSArray arrayWithObjects: documentItem, dashboardItem, settingItem, nil], nil];    
     [self.view addSubview:_launcherView];
 }
 
@@ -154,59 +117,97 @@
     _delegate = delegate;
 }
 
-// TTLauncherViewDelegate
-- (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item 
-{
-    //    UIButton* logoutButton = (UIButton *)[self.navigationController.navigationBar viewWithTag:111];
-    
-    if ([item.title isEqualToString:Localize(@"News")]) 
-    {
-        ActivityStreamBrowseViewController_iPhone* _activityStreamBrowseViewController_iPhone = [[ActivityStreamBrowseViewController_iPhone alloc] initWithNibName:@"ActivityStreamBrowseViewController_iPhone" bundle:nil];
-        [self.navigationController pushViewController:_activityStreamBrowseViewController_iPhone animated:YES];
-        [_activityStreamBrowseViewController_iPhone release];
-    }
-    
-    if ([item.title isEqualToString:Localize(@"Documents")]) 
-    {
-        //Start Documents
-        DocumentsViewController_iPhone *documentsViewController = [[DocumentsViewController_iPhone alloc] initWithNibName:@"DocumentsViewController_iPhone" bundle:nil];
-        [self.navigationController pushViewController:documentsViewController animated:YES];
-        [documentsViewController release];
-    }
-    
-    if ([item.title isEqualToString:Localize(@"Dashboard")]) 
-    {
-        
-        //Start Dashboard
-        
-        DashboardViewController_iPhone *dashboardController = [[DashboardViewController_iPhone alloc] initWithNibName:@"DashboardViewController_iPhone" bundle:nil];
-        [self.navigationController pushViewController:dashboardController animated:YES];
-        [dashboardController release];
-    }
-    
-    if([item.title isEqualToString:Localize(@"Settings")]) 
-    {
-        SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        settingsViewController.settingsDelegate = self;
-        [settingsViewController startRetrieve];
-        UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:settingsViewController] autorelease];
-        [settingsViewController release];
-        
-        navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        [self.navigationController presentModalViewController:navController animated:YES];
-    }
+#pragma mark UITableview delegate
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
 }
 
-- (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc]
-                                                 initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                 target:_launcherView action:@selector(endEditing)] autorelease] animated:YES];
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            cell.textLabel.text = Localize(@"News");
+            cell.imageView.image = [UIImage imageNamed:@"HomeActivityStreamsIconiPhone.png"];
+        }
+            break;
+        case 1:
+        {
+            cell.textLabel.text = Localize(@"Documents");
+            cell.imageView.image = [UIImage imageNamed:@"HomeDocumentsIconiPhone.png"];
+        }
+            break;
+        case 2:
+        {
+            cell.textLabel.text = Localize(@"Dashboard");
+            cell.imageView.image = [UIImage imageNamed:@"HomeDashboardIconiPhone.png"];
+        }
+            break;
+        case 3:
+        {
+            cell.textLabel.text = Localize(@"Settings");
+            cell.imageView.image = [UIImage imageNamed:@"HomeSettingsIconiPhone.png"];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return cell;
 }
 
-- (void)launcherViewDidEndEditing:(TTLauncherView*)launcher 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.navigationItem setRightBarButtonItem:nil animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            ActivityStreamBrowseViewController_iPhone* _activityStreamBrowseViewController_iPhone = [[ActivityStreamBrowseViewController_iPhone alloc] initWithNibName:@"ActivityStreamBrowseViewController_iPhone" bundle:nil];
+            [self.navigationController pushViewController:_activityStreamBrowseViewController_iPhone animated:YES];
+            [_activityStreamBrowseViewController_iPhone release];
+        }
+            break;
+        case 1:
+        {
+            //Start Documents
+            DocumentsViewController_iPhone *documentsViewController = [[DocumentsViewController_iPhone alloc] initWithNibName:@"DocumentsViewController_iPhone" bundle:nil];
+            [self.navigationController pushViewController:documentsViewController animated:YES];
+            [documentsViewController release];
+        }
+            break;
+        case 2:
+        {
+            //Start Dashboard
+            
+            DashboardViewController_iPhone *dashboardController = [[DashboardViewController_iPhone alloc] initWithNibName:@"DashboardViewController_iPhone" bundle:nil];
+            [self.navigationController pushViewController:dashboardController animated:YES];
+            [dashboardController release];
+        }
+            break;
+        case 3:
+        {
+            SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            settingsViewController.settingsDelegate = self;
+            [settingsViewController startRetrieve];
+            UINavigationController *navController = [[[UINavigationController alloc] initWithRootViewController:settingsViewController] autorelease];
+            [settingsViewController release];
+            
+            navController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+            [self.navigationController presentModalViewController:navController animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)onBbtnSignOut

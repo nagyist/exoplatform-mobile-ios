@@ -64,7 +64,7 @@
     _lbName.backgroundColor = [UIColor clearColor];
     
     
-    _ttLabelDescription = [[TTStyledTextLabel alloc] initWithFrame:_lbDescription.frame];
+    _ttLabelDescription = [[RTLabel alloc] initWithFrame:_lbDescription.frame];
     _ttLabelDescription.userInteractionEnabled = NO;
     _ttLabelDescription.autoresizesSubviews = YES;
     _ttLabelDescription.backgroundColor = [UIColor clearColor];
@@ -79,7 +79,7 @@
     
  
     _lbName.text = name;
-    _ttLabelDescription.html = description?description:@"";
+    [_ttLabelDescription setText:description?description:@""] ;
     _imgvIcon.placeholderImage = [UIImage imageNamed:@"gadgetPlaceHolder"];
     _imgvIcon.imageURL = [NSURL URLWithString:iconURL];
     

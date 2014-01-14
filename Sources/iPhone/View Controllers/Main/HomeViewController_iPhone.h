@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Three20/Three20.h"
 #import "SettingsViewController.h"
 
-@interface HomeViewController_iPhone : UIViewController <TTLauncherViewDelegate,SettingsDelegateProcotol> {
+@interface HomeViewController_iPhone : UIViewController <UITableViewDelegate,UITableViewDataSource,SettingsDelegateProcotol> {
     id                  _delegate;
-    TTLauncherView*     _launcherView;
+    UITableView*     _launcherView;
         
     BOOL                _isCompatibleWithSocial;
         

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Three20/Three20.h"
+#import "RTLabel.h"
 #import "CustomBackgroundForCell_iPhone.h"
 
 @class EGOImageView;
@@ -20,7 +20,7 @@
     
     IBOutlet EGOImageView*          _imgvIcon;
     
-    TTStyledTextLabel*              _ttLabelDescription;
+    RTLabel*              _ttLabelDescription;
 }
 
 
