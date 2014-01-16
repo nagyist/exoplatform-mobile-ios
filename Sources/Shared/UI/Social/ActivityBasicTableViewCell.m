@@ -253,8 +253,6 @@
 - (void)setSocialActivityStreamForSpecificContent:(SocialActivity *)socialActivityStream {
  
     [_htmlMessage setText:socialActivityStream.title];
-    //_htmlMessage.text = [TTStyledText textFromXHTML:socialActivityStream.title];
-
     _lbName.text = [socialActivityStream.posterIdentity.fullName copy];
 }
 

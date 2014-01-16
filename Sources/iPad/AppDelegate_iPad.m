@@ -93,9 +93,6 @@
 -(void)showHome
 {
     
-    //[TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
-
-    
     [[FilesProxy sharedInstance] creatUserRepositoryHomeUrl];
     [[SocialRestConfiguration sharedInstance] updateDatas];
 

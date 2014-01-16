@@ -109,8 +109,6 @@
 
 - (void)showHomeSidebarViewController {
     // Login is successfully
-    //[TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
-
     
     [[FilesProxy sharedInstance] creatUserRepositoryHomeUrl];
     [[SocialRestConfiguration sharedInstance] updateDatas];
@@ -127,9 +125,6 @@
 
 - (void)showHomeViewController {
     // Login is successfully
-    
-    //[TTStyleSheet setGlobalStyleSheet:[[[HomeStyleSheet alloc] init] autorelease]];
-
     
     [[FilesProxy sharedInstance] creatUserRepositoryHomeUrl];
     [[SocialRestConfiguration sharedInstance] updateDatas];
