@@ -58,7 +58,7 @@
  * General
  */
 
-"Cancel" = "#{word.cancel}";
+"Cancel" = "Cancel";
 
 "DoneButton" = "Done";
 
@@ -110,6 +110,10 @@
 "English" = "English";
 
 "French" = "French";
+
+"German" = "German";
+
+"Spanish" = "Spanish";
 
 "Send" = "Send";
 
