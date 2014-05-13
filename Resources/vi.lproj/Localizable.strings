@@ -12,11 +12,11 @@
 
 "SignInPageTitle" = "Login page";
 
-"SignInButton" = "Login";
+"SignInButton" = "Đăng nhập";
 
-"UsernamePlaceholder" = "Username";
+"UsernamePlaceholder" = "Tên người dùng";
 
-"PasswordPlaceholder" = "Password";
+"PasswordPlaceholder" = "Mật khẩu";
 
 
 /* 
@@ -27,15 +27,15 @@
 
 "NewFolderTitle" = "New folder";
 
-"RenameTitle" = "Rename";
+"RenameTitle" = "Đổi tên";
 
-"Copy" = "Copy";
+"Copy" = "Sao chép";
 
-"Move" = "Cut";
+"Move" = "Cắt";
 
-"Paste" = "Paste";
+"Paste" = "Dán";
 
-"Documents" = "Documents";
+"Documents" = "Tài liệu";
 
 "TakeAPicture" = "Take a picture";
 
@@ -51,30 +51,30 @@
 
 "personal" = "personal";
 
-"group" = "group";
+"group" = "nhóm";
 
 
 /*
  * General
  */
 
-"Cancel" = "Cancel";
+"Cancel" = "Hủy bỏ";
 
-"DoneButton" = "Done";
+"DoneButton" = "Hoàn thành";
 
-"Delete" = "Delete";
+"Delete" = "Xóa";
 
 "Success" = "Success";
 
-"Home" = "Home";
+"Home" = "Trang chủ";
 
-"Loading" = "Loading...";
+"Loading" = "Đang tải...";
 
 "LoadingURL" = "Loading URL";
 
-"OK" = "OK";
+"OK" = "Đồng ý";
 
-"Disconnect" = "Disconnect";
+"Disconnect" = "Ngừng kết nối";
 
 "Pull down to refresh..." = "Pull down to refresh...";
 
@@ -86,16 +86,16 @@
 
 "Optional" = "Optional";
 
-"Fullscreen" = "Fullscreen";
+"Fullscreen" = "Toàn màn hình";
 
-"Close" = "Close";
+"Close" = "Đóng";
 
 
 /*
  * Settings
  */
 
-"Settings" = "Settings";
+"Settings" = "Tham số";
 
 "RememberMe" = "Remember me";
 
@@ -105,17 +105,17 @@
 
 "ShowPrivateDrive" = "Show my private drive";
 
-"Language" = "Languages";
+"Language" = "Ngôn ngữ";
 
-"English" = "English";
+"English" = "Tiếng Anh";
 
-"French" = "French";
+"French" = "Tiếng Pháp";
 
-"German" = "German";
+"German" = "Tiếng Đức";
 
 "Spanish" = "Spanish";
 
-"Send" = "Send";
+"Send" = "Gửi email";
 
 "ServerList" = "Server list";
 
@@ -135,7 +135,6 @@
 
 "ServerUrl" = "Server URL";
 
-"Social" = "Social";
 
 /*
  * Errors & Warnings
@@ -167,7 +166,7 @@
 
 "NoGadget" = "You have no gadgets in your Apps";
 
-"MessageInfo" = "Information";
+"MessageInfo" = "Thông tin";
 
 "MessageErrorServer" = "You cannot add a server with an empty name or URL";
 
@@ -175,13 +174,13 @@
 
 "InvalidUrl" = "Invalid URL";
 
-"FileError" = "Error";
+"FileError" = "Lỗi";
 
 "CameraNotAvailable" = "The camera is not available";
 
 "GadgetsCannotBeRetrieved" = "Gadgets cannot be retrieved";
 
-"Error" = "Error";
+"Error" = "Lỗi";
 
 "NoMessageComment" = "You must enter some text to comment";
 
@@ -220,7 +219,7 @@
  * Apps
  */
 
-"Dashboard" = "Apps";
+"Dashboard" = "Các Ứng dụng";
 
 
 /*
@@ -241,9 +240,9 @@
 
 "ActivityStream" = "Activity stream";
 
-"News" = "News";
+"News" = "Tin tức";
 
-"Details" = "Details";
+"Details" = "Chi tiết";
 
 "comments(%d)" = "Comments(%d)";
 
@@ -255,9 +254,9 @@
 
 "UpdatingActivity" = "Updating activity";
 
-"PostingActivity" = "Post";
+"PostingActivity" = "Bài viết";
 
-"CommentActivity" = "Comment";
+"CommentActivity" = "Bình luận";
 
 "GettingActivityDetail" = "Getting activity detail";
 
@@ -289,9 +288,9 @@
 
 "TaskUpdated" = "has just updated the task:";
 
-"Description" = "Description";
+"Description" = "Mô tả";
 
-"Location" = "Location";
+"Location" = "Vị trí";
 
 "StartTime" = "Start time";
 
@@ -301,9 +300,9 @@
 
 "Image Preview" = "Image preview";
 
-"Change" = "Change";
+"Change" = "Thay đổi";
 
-"Remove" = "Remove";
+"Remove" = "Loại bỏ";
 
 "All Updates" = "All updates";
 
@@ -318,7 +317,7 @@
  * Date message converter
  */
 
-"Today" = "Today";
+"Today" = "Ngày hôm nay";
 
 "DateFmt" = "%1$@%2$@%3$@%4$@";
 
@@ -373,7 +372,7 @@
 
 "eXoCloudConfigurationAssistant" = "eXo";
 
-"ServiceUnavailable" = "Impossible to connect to your intranet, please check its URL or contact your administrator" ;
+"ServiceUnavailable" = "Impossible to connect to your intranet, please check its URL or contact your administrator";
 
 "EmailIsBlacklisted" = "Please use your company email to sign up";
 
@@ -391,9 +390,9 @@
 
 "TenantCreation" = "We are creating your intranet. Please come back when you receive our welcome email";
 
-"Username" = "Username";
+"Username" = "Tên người dùng";
 
-"Password" = "Password";
+"Password" = "Mật khẩu";
 
 "Your credentials" = "Your credentials";
 
@@ -401,7 +400,7 @@
 
 "EnterCredentials" = "Enter your credentials and Login";
 
-"My intranet" = "My Intranet";
+"My intranet" = "My intranet";
 
 "SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
 

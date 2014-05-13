@@ -1,0 +1,407 @@
+/* 
+  Localizable.strings
+  eXo Platform
+
+  Created by Le Thanh Quang on 7/9/12.
+  Copyright (c) 2012 eXoPlatform. All rights reserved.
+*/
+
+/*
+ * Authenticate
+ */
+
+"SignInPageTitle" = "صفحة تسجيل الدّخول";
+
+"SignInButton" = "تسجيل الدخول";
+
+"UsernamePlaceholder" = "اسم المستخدم";
+
+"PasswordPlaceholder" = "كلمة السر";
+
+
+/* 
+ * Documents
+ */
+
+"TakePicture" = "التقاط صورة";
+
+"NewFolderTitle" = "مُـجلّــد جديد";
+
+"RenameTitle" = "إعادة تسمية";
+
+"Copy" = "نسخ";
+
+"Move" = "قصّ";
+
+"Paste" = "ألصق";
+
+"Documents" = "وثائق";
+
+"TakeAPicture" = "التقاط صورة";
+
+"AttachedPhoto" = "الصور المرفقة";
+
+"AddAPhoto" = "إضافة صورة";
+
+"PhotoLibrary" = "مكتبة الصّور";
+
+// Drives types
+
+"general" = "عامّ";
+
+"personal" = "شخصي";
+
+"group" = "المجموعة";
+
+
+/*
+ * General
+ */
+
+"Cancel" = "الغاء";
+
+"DoneButton" = "عمله";
+
+"Delete" = "حذف";
+
+"Success" = "نجاح";
+
+"Home" = "الصفحة الرئيسية";
+
+"Loading" = "تحميل...";
+
+"LoadingURL" = "تحميل الـ URL";
+
+"OK" = "موافق";
+
+"Disconnect" = "قطع الاتصال";
+
+"Pull down to refresh..." = "اسحب للأسفل للتحديث...";
+
+"Release to refresh..." = "اترك للتحديث...";
+
+"Last Updated: %@" = "آخر تحديث: %@";
+
+"Required" = "مطلوب";
+
+"Optional" = "إختياري";
+
+"Fullscreen" = "شاشة كاملة";
+
+"Close" = "اغلاق";
+
+
+/*
+ * Settings
+ */
+
+"Settings" = "إعدادات";
+
+"RememberMe" = "Remember me";
+
+"AutoLogin" = "Auto login";
+
+"KeepSelectedStream" = "تذكر الفلتر الخاصّ بي";
+
+"ShowPrivateDrive" = "عرض محرك الأقراص الخاصّ بي";
+
+"Language" = "اللغات";
+
+"English" = "انقليزية";
+
+"French" = "فرنسية";
+
+"German" = "الألمانية";
+
+"Spanish" = "الإسبانيّة";
+
+"Send" = "إرسال";
+
+"ServerList" = "قائمة المزوّدين";
+
+"NewServer" = "مزوّد جديد";
+
+"ServerModify" = "تغيير المزوّد";
+
+"ApplicationsInformation" = "معلومات التطبيق";
+
+"ServerVersion" = "إصدار المزوّد";
+
+"ApplicationEdition" = "الطبعة الخاصّة بالتطبيق";
+
+"ApplicationVersion" = "الطبعة الخاصّة بالتطبيق";
+
+"ServerName" = "اسم الـمُزوّد";
+
+"ServerUrl" = "عنوان المزوّد (URL)";
+
+
+/*
+ * Errors & Warnings
+ */
+
+"BadResponse" = "قام المزوّد بإرجاع بيانات غير صحيحة.";
+
+"NetworkConnection" = "خطأ في الاتصال";
+
+"Authorization" = "فشل تسجيل الدخول";
+
+"WrongUserNamePassword" = "لا يمكن تسجيل الدّخول ، تحقق من اسم المستخدم وكلمة المرور الخاصّة بك";
+
+"InvalidServer" = "لا يمكن تسجيل الدّخول الى شبكة الإنترانت الخاصّة بك، الرجاء التحقق من عنوان URL الخاص بها أو اتصل بالمسؤول.";
+
+"NetworkConnectionFailed" = "لا يمكن تسجيل الدّخول الى شبكة الإنترانت الخاصّة بك، الرجاء التحقق من عنوان URL الخاص بها أو اتصل بالمسؤول.";
+
+"UserNameEmpty" = "اسم المستخدم غير صحيح";
+
+"PasswordEmpty" = "كلمة المرور غير صحيحة";
+
+"SelectedDomainEmpty" = "لم يتمّ تحديد المزوّد";
+
+"EmptyFolder" = "هذا المجلد فارغ";
+
+"UnreadableFile" = "لا يمكن فتح هذا الملف ضمن هذا التطبيق";
+
+"NoActivities" = "لم يتمّ نشر أي نشاط على تيّار الأنشطة الخاصّ بك";
+
+"NoGadget" = "ليس لك أدوات في التطبيقات الخاصّة بك.";
+
+"MessageInfo" = "معلومات";
+
+"MessageErrorServer" = "لا يمكنك إضافة مزوّد مع عنوان (URL) أو اسم فارغ.";
+
+"MessageErrorExist" = "هذا المزوّد موجود مُسبقــا";
+
+"InvalidUrl" = "عنوان URL غير صحيح";
+
+"FileError" = "خطأ";
+
+"CameraNotAvailable" = "الكاميرا غير متوفرة";
+
+"GadgetsCannotBeRetrieved" = "لا يمكن استرداد الأدوات";
+
+"Error" = "خطأ";
+
+"NoMessageComment" = "يجب إدخال بعض الكلمات بغية التعليق";
+
+"NoMessagePosting" = "لا توجد رسالة يمكن ارسالها";
+
+"GettingActionCannotBeCompleted" = "لا يمكنك الحصول على الأنشطة";
+
+"UpdatingActionCannotBeCompleted" = "لا يمكنك تغيير النشاط";
+
+"LikingActionCannotBeCompleted" = "لا يمكنك الإعجاب بهذا النّشاط";
+
+"UnLikeActionCannotBeCompleted" = "لا يمكنك الغاء الإعجاب بهذا النّشاط";
+
+"PostingActionCannotBeCompleted" = "لا يمكن اضافة النشاط";
+
+"CommentActionCannotBeCompleted" = "لا يمكنك نشر تعليق";
+
+"LoadMoreActionCannotBeCompleted" = "طرأ خطأ، يتم الآن إعادة تحميل الأنشطة.";
+
+"NotCompliant" = "لا يمكن تشغيل التطبيق على هذه الطبعة التابعة لهذه البوابة";
+
+"SpecialCharacters" = "الحروف الخاصّة غير مسموح بها";
+
+"DashboardsCannotBeRetrieved" = "لا يمكن استرداد لوحات المعلومات";
+
+"FolderNameAlreadyExist" = "هذا المجلد موجود مسبقاً";
+
+"FolderNameEmpty" = "اسم المجلد فارغ";
+
+"Cannot move file to its location" = "لا يمكن نقل الملف إلى نفس الموقع";
+
+"Cannot transfer file" = "لا يمكن نقل الملف";
+
+
+/*
+ * Apps
+ */
+
+"Dashboard" = "تطبيقات";
+
+
+/*
+ * Activity stream
+ */
+
+"numOfLikers" = "%d مُعجبون";
+
+"numOfLiker" = "%d مُعجب";
+
+"likeThisActivity" = "%d مُعجبون بهذا.";
+
+"NoOneLikeThis" = "لا أحد معجب بهذا الى حدّ الآن";
+
+"ActivityDetails" = "تفاصيل النشاط";
+
+"MessageComposer" = "قم بتكوين رسالتك";
+
+"ActivityStream" = "الأنشطة و المستجدّات";
+
+"News" = "أخبار";
+
+"Details" = "تفاصيل";
+
+"comments(%d)" = "تعليقات (%d)";
+
+"likes(%d)" = "أشخاص نال إعجابهم (%d)";
+
+"YourComment" = "تعليقك";
+
+"GettingActivity" = "تحميل النشاط";
+
+"UpdatingActivity" = "تحديث النشاط";
+
+"PostingActivity" = "ردّ";
+
+"CommentActivity" = "تعليق";
+
+"GettingActivityDetail" = "الحصول على تفاصيل النشاط";
+
+"UpdatingActivityDetail" = "تحديث تفاصيل النشاط";
+
+"EditWiki" = "قام بتغيير صفحة الويكي:";
+
+"CreateWiki" = "قام بانشاء صفحة الويكي:";
+
+"NewPost" = "أضاف موضوع جديد:";
+
+"UpdatePost" = "قام بتغيير موضوع:";
+
+"NewTopic" = "قام بطرح موضوع جديد:";
+
+"UpdateTopic" = "قام بتغيير الموضوع:";
+
+"UpdateQuestion" = "قام بتغيير السؤال:";
+
+"Answered" = "  أجاب على السؤال:";
+
+"Asked" = "قام بطرح سؤال:";
+
+"EventAdded" = "أضاف حدث:";
+
+"EventUpdated" = "قام بتغيير الحدث:";
+
+"TaskAdded" = "أضاف مهمّة:";
+
+"TaskUpdated" = "قام يتغيير المهمّة:";
+
+"Description" = "الوصف";
+
+"Location" = "المكان";
+
+"StartTime" = "توقيت البداية";
+
+"EndTime" = "توقيت الانهاء";
+
+"NoComment" = "لم يتمّ بعد اضافة تعليق، بادر أنت الأوّل بالتعليق";
+
+"Image Preview" = "عرض مُسبق للصّورة";
+
+"Change" = "تغيير";
+
+"Remove" = "حذف";
+
+"All Updates" = "كافة التحديثات";
+
+"My Connections" = "علاقاتي";
+
+"My Spaces" = "فضاءاتي";
+
+"My Status" = "حالة التوافر الخاصّة بي";
+
+
+/*
+ * Date message converter
+ */
+
+"Today" = "اليوم";
+
+"DateFmt" = "%1$@%2$@%3$@%4$@";
+
+ //in english, Order of the message: modifier - number - measure - direction
+ //in french, Order of the message: direction - modifier - number - measure
+
+"DateFmt ago" = "منذ";
+
+"DateFmt from now" = "من الآن";
+
+"DateFmt Less than" = "أقل من ";
+
+"DateFmt About" = "حول ";
+
+"DateFmt Over" = "على مدى ";
+
+"DateFmt Almost" = "تقريبا ";
+
+"DateFmt seconds" = " ثوان ";
+
+"DateFmt minute" = " دقيقة ";
+
+"DateFmt minutes" = " دقائق ";
+
+"DateFmt hour" = " ساعة ";
+
+"DateFmt hours" = " ساعات ";
+
+"DateFmt day" = " يوم  ";
+
+"DateFmt days" = " أيام ";
+
+"DateFmt month" = " شهر ";
+
+"DateFmt months" = " أشهر ";
+
+"DateFmt year" = " سنة ";
+
+"DateFmt years" = "سنوات ";
+
+
+/*
+ * Cloud sign up assistant 
+ */
+"ServerNotAvailable" = "لا يمكن تسجيل الدّخول الى شبكة الإنترانت الخاصّة بك، الرجاء التحقق من عنوان URL الخاص بها أو اتصل بالمسؤول.";
+
+"AccountAlreadyExists" = "An account already exists for this email, you will be redirected to the login screen";
+
+"NumberUsersExceed" = " Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"StartTheConfigurationAssistant" = "Start the sign-up assistant";
+
+"eXoCloudConfigurationAssistant" = "eXo";
+
+"ServiceUnavailable" = "لا يمكن تسجيل الدّخول الى شبكة الإنترانت الخاصّة بك، الرجاء التحقق من عنوان URL الخاص بها أو اتصل بالمسؤول.";
+
+"EmailIsBlacklisted" = "Please use your company email to sign up";
+
+"NumberOfUsersExceed" = "Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"IncorrectEmailFormat" = "Please input a valid email address";
+
+"IncorrectPassword" = "Impossible to connect, check your password";
+
+"UserNotExist" = " No account exists for this email, check your email or signup";
+
+"TenantNotExist" = "No account exists for this email, check your email or signup";
+
+"TenantResuming" = "We are restoring your intranet, please retry in few minutes";
+
+"TenantCreation" = "We are creating your intranet. Please come back when you receive our welcome email";
+
+"Username" = "اسم المستخدم";
+
+"Password" = "كلمة السر";
+
+"Your credentials" = "Your credentials";
+
+"EnterServerUrl" = "Enter the URL of your intranet";
+
+"EnterCredentials" = "Enter your credentials and Login";
+
+"My intranet" = "My intranet";
+
+"SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"NoTenantName" = "There is no tenant name";

@@ -1,0 +1,407 @@
+/* 
+  Localizable.strings
+  eXo Platform
+
+  Created by Le Thanh Quang on 7/9/12.
+  Copyright (c) 2012 eXoPlatform. All rights reserved.
+*/
+
+/*
+ * Authenticate
+ */
+
+"SignInPageTitle" = "Pagina di login";
+
+"SignInButton" = "Login";
+
+"UsernamePlaceholder" = "Nome utente";
+
+"PasswordPlaceholder" = "Password";
+
+
+/* 
+ * Documents
+ */
+
+"TakePicture" = "Scattare una foto";
+
+"NewFolderTitle" = "Nuova cartella";
+
+"RenameTitle" = "Rinomina";
+
+"Copy" = "Copia";
+
+"Move" = "Taglia";
+
+"Paste" = "Incolla";
+
+"Documents" = "Documenti";
+
+"TakeAPicture" = "Scattare una foto";
+
+"AttachedPhoto" = "Foto allegata";
+
+"AddAPhoto" = "Aggiungere una foto";
+
+"PhotoLibrary" = "Fototeca";
+
+// Drives types
+
+"general" = "generale";
+
+"personal" = "personale";
+
+"group" = "gruppo";
+
+
+/*
+ * General
+ */
+
+"Cancel" = "Annulla";
+
+"DoneButton" = "Fatto";
+
+"Delete" = "Cancellare";
+
+"Success" = "Successo";
+
+"Home" = "Home";
+
+"Loading" = "Caricamento...";
+
+"LoadingURL" = "Caricamento URL";
+
+"OK" = "OK";
+
+"Disconnect" = "Disconnetti";
+
+"Pull down to refresh..." = "Scorri verso il basso per aggiornare...";
+
+"Release to refresh..." = "Rilascia per aggiornare...";
+
+"Last Updated: %@" = "Ultimo aggiornamento: % @";
+
+"Required" = "Obbligatorio";
+
+"Optional" = "Opzionale";
+
+"Fullscreen" = "Pieno Schermo";
+
+"Close" = "Chiuso";
+
+
+/*
+ * Settings
+ */
+
+"Settings" = "Impostazioni";
+
+"RememberMe" = "Remember me";
+
+"AutoLogin" = "Auto login";
+
+"KeepSelectedStream" = "Ricordarsi il mio filtro";
+
+"ShowPrivateDrive" = "Visualizza la mia unità privata";
+
+"Language" = "Lingue";
+
+"English" = "Inglese";
+
+"French" = "Francese";
+
+"German" = "Tedesco";
+
+"Spanish" = "Spagnolo";
+
+"Send" = "Invia";
+
+"ServerList" = "Lista dei server";
+
+"NewServer" = "Nuovo server";
+
+"ServerModify" = "Modificare il server";
+
+"ApplicationsInformation" = "Informazioni sull'applicazione";
+
+"ServerVersion" = "Versione server";
+
+"ApplicationEdition" = "Edizione di applicazione";
+
+"ApplicationVersion" = "Versione applicazione";
+
+"ServerName" = "Nome del server";
+
+"ServerUrl" = "URL del server";
+
+
+/*
+ * Errors & Warnings
+ */
+
+"BadResponse" = "Il server ha restituito dati non validi.";
+
+"NetworkConnection" = "Errore di connessione";
+
+"Authorization" = "Accesso non riuscito";
+
+"WrongUserNamePassword" = "Impossibile connettersi, verificare username e password";
+
+"InvalidServer" = "Impossibile connettersi alla rete intranet, per favore controllare l'URL o contattare l'amministratore";
+
+"NetworkConnectionFailed" = "Impossibile connettersi alla rete intranet, per favore controllare l'URL o contattare l'amministratore";
+
+"UserNameEmpty" = "Username non corretto";
+
+"PasswordEmpty" = "Password non corretta";
+
+"SelectedDomainEmpty" = "Nessun server specificato";
+
+"EmptyFolder" = "Questa cartella è vuota";
+
+"UnreadableFile" = "Questo file non puó essere aperto nell'applicazione";
+
+"NoActivities" = "Nessuna attività è stata registrata sul vostro flusso attività";
+
+"NoGadget" = "Non ha nessun gadget nelle sue app";
+
+"MessageInfo" = "Informazione";
+
+"MessageErrorServer" = "Non è possibile aggiungere un server con un URL o nome vuoto";
+
+"MessageErrorExist" = "Questo server esiste già";
+
+"InvalidUrl" = "URL non valido";
+
+"FileError" = "Errore";
+
+"CameraNotAvailable" = "La fotocamera non è disponibile";
+
+"GadgetsCannotBeRetrieved" = "I Gadget non possono essere recuperati";
+
+"Error" = "Errore";
+
+"NoMessageComment" = "Deve inserire del testo per commentare";
+
+"NoMessagePosting" = "Deve inserire del testo per publicare";
+
+"GettingActionCannotBeCompleted" = "Non è possibile ottenere attività";
+
+"UpdatingActionCannotBeCompleted" = "È non è possibile aggiornare l'attività";
+
+"LikingActionCannotBeCompleted" = "Non si può mettere un \"Mi piace\" su l'attività";
+
+"UnLikeActionCannotBeCompleted" = "Non si può retirare il \"mi piace\" dell'attività";
+
+"PostingActionCannotBeCompleted" = "Lei non può inviare un messaggio";
+
+"CommentActionCannotBeCompleted" = "Lei non può publicare un commento";
+
+"LoadMoreActionCannotBeCompleted" = "è avvenuto un errore, le attività stano ricaricando.";
+
+"NotCompliant" = "Non è possibile eseguire l'applicazione nell'edizione della piattaforma";
+
+"SpecialCharacters" = "Non sono ammessi caratteri speciali";
+
+"DashboardsCannotBeRetrieved" = "Non è possibile recuperare gli dashboards";
+
+"FolderNameAlreadyExist" = "Questa cartella esiste già";
+
+"FolderNameEmpty" = "Il nome della cartella è vuoto";
+
+"Cannot move file to its location" = "Non è possibile spostare il file nella stessa destinazione";
+
+"Cannot transfer file" = "Non è possibile trasferire i file.";
+
+
+/*
+ * Apps
+ */
+
+"Dashboard" = "Applicazioni";
+
+
+/*
+ * Activity stream
+ */
+
+"numOfLikers" = "%d Fans";
+
+"numOfLiker" = "%d Fan";
+
+"likeThisActivity" = "%d persone li e piacuto questo";
+
+"NoOneLikeThis" = "A nessuno piace questo";
+
+"ActivityDetails" = "Dettagli dell'attività";
+
+"MessageComposer" = "Compositore di messaggio";
+
+"ActivityStream" = "Flusso di attività";
+
+"News" = "Notizie";
+
+"Details" = "Dettagli";
+
+"comments(%d)" = "Commenti(%d)";
+
+"likes(%d)" = "\"Mi piace\"(%d)";
+
+"YourComment" = "Il tuo commento";
+
+"GettingActivity" = "Ottenendo l'attività";
+
+"UpdatingActivity" = "Aggiornando attività";
+
+"PostingActivity" = "post";
+
+"CommentActivity" = "Commenta";
+
+"GettingActivityDetail" = "Ottenendo dettaglio attività";
+
+"UpdatingActivityDetail" = "Aggiornando dettaglio di attività ";
+
+"EditWiki" = "ha modificato la pagina Wiki:";
+
+"CreateWiki" = "ha creato la pagina Wiki:";
+
+"NewPost" = "ha aggiunto un nuovo post:";
+
+"UpdatePost" = "ha aggiornato un post:";
+
+"NewTopic" = "ha postato un nuovo argomento:";
+
+"UpdateTopic" = "ha aggiornato un argomento:";
+
+"UpdateQuestion" = "ha aggiornato la domanda:";
+
+"Answered" = "ha risposto alla domanda:";
+
+"Asked" = "ha chiesto:";
+
+"EventAdded" = "ha aggiunto un evento:";
+
+"EventUpdated" = "ha appena aggiornato l'evento:";
+
+"TaskAdded" = "ha aggiunto un compito:";
+
+"TaskUpdated" = "ha appena aggiornato il compito:";
+
+"Description" = "Descrizione";
+
+"Location" = "Posizione";
+
+"StartTime" = "Ora di inizio";
+
+"EndTime" = "Ora di fine";
+
+"NoComment" = "Nessuno ha commentato, sia il primo a farlo";
+
+"Image Preview" = "Anteprima immagine";
+
+"Change" = "Cambia";
+
+"Remove" = "Rimuovere";
+
+"All Updates" = "Tutti gli aggiornamenti";
+
+"My Connections" = "Mie connessioni";
+
+"My Spaces" = "Miei spazi";
+
+"My Status" = "Mio stato";
+
+
+/*
+ * Date message converter
+ */
+
+"Today" = "Oggi";
+
+"DateFmt" = "1$@%2$@%3$@%4$ % @";
+
+ //in english, Order of the message: modifier - number - measure - direction
+ //in french, Order of the message: direction - modifier - number - measure
+
+"DateFmt ago" = "fa";
+
+"DateFmt from now" = "da ora";
+
+"DateFmt Less than" = "Meno di ";
+
+"DateFmt About" = "Circa ";
+
+"DateFmt Over" = "Piu di";
+
+"DateFmt Almost" = "Quasi ";
+
+"DateFmt seconds" = " secondi ";
+
+"DateFmt minute" = " minuto ";
+
+"DateFmt minutes" = " minuti ";
+
+"DateFmt hour" = " ora ";
+
+"DateFmt hours" = " ore ";
+
+"DateFmt day" = " giorno ";
+
+"DateFmt days" = " giorni ";
+
+"DateFmt month" = " mese ";
+
+"DateFmt months" = " mesi ";
+
+"DateFmt year" = " anno ";
+
+"DateFmt years" = " anni ";
+
+
+/*
+ * Cloud sign up assistant 
+ */
+"ServerNotAvailable" = "Impossibile connettersi alla rete intranet, per favore controllare l'URL o contattare l'amministratore";
+
+"AccountAlreadyExists" = "An account already exists for this email, you will be redirected to the login screen";
+
+"NumberUsersExceed" = " Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"StartTheConfigurationAssistant" = "Start the sign-up assistant";
+
+"eXoCloudConfigurationAssistant" = "eXo";
+
+"ServiceUnavailable" = "Impossibile connettersi alla rete intranet, per favore controllare l'URL o contattare l'amministratore";
+
+"EmailIsBlacklisted" = "Please use your company email to sign up";
+
+"NumberOfUsersExceed" = "Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"IncorrectEmailFormat" = "Please input a valid email address";
+
+"IncorrectPassword" = "Impossible to connect, check your password";
+
+"UserNotExist" = " No account exists for this email, check your email or signup";
+
+"TenantNotExist" = "No account exists for this email, check your email or signup";
+
+"TenantResuming" = "We are restoring your intranet, please retry in few minutes";
+
+"TenantCreation" = "We are creating your intranet. Please come back when you receive our welcome email";
+
+"Username" = "Nome utente";
+
+"Password" = "Password";
+
+"Your credentials" = "Your credentials";
+
+"EnterServerUrl" = "Enter the URL of your intranet";
+
+"EnterCredentials" = "Enter your credentials and Login";
+
+"My intranet" = "My intranet";
+
+"SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"NoTenantName" = "There is no tenant name";

@@ -1,0 +1,407 @@
+/* 
+  Localizable.strings
+  eXo Platform
+
+  Created by Le Thanh Quang on 7/9/12.
+  Copyright (c) 2012 eXoPlatform. All rights reserved.
+*/
+
+/*
+ * Authenticate
+ */
+
+"SignInPageTitle" = "Giriş Sayfası";
+
+"SignInButton" = "Uturum Aç";
+
+"UsernamePlaceholder" = "Kullanıcı Adı";
+
+"PasswordPlaceholder" = "Şifre";
+
+
+/* 
+ * Documents
+ */
+
+"TakePicture" = "Resim Çekin";
+
+"NewFolderTitle" = "Yeni Klasör";
+
+"RenameTitle" = "Yeniden Adlandır";
+
+"Copy" = "Kopyala";
+
+"Move" = "Kes";
+
+"Paste" = "Yapıştır";
+
+"Documents" = "Belgeler";
+
+"TakeAPicture" = "Resim Çekin";
+
+"AttachedPhoto" = "Ekli Fotoğraf";
+
+"AddAPhoto" = "Fotoğraf Ekle";
+
+"PhotoLibrary" = "Fotoğraf Arşivi";
+
+// Drives types
+
+"general" = "Genel";
+
+"personal" = "Kişisel";
+
+"group" = "grup";
+
+
+/*
+ * General
+ */
+
+"Cancel" = "İptal";
+
+"DoneButton" = "Bitmiş";
+
+"Delete" = "Sil";
+
+"Success" = "Başarılı";
+
+"Home" = "Ana Sayfa";
+
+"Loading" = "Yükleniyor...";
+
+"LoadingURL" = "URL Yükleniyor";
+
+"OK" = "Tamam";
+
+"Disconnect" = "Bağlantıyı Kes";
+
+"Pull down to refresh..." = "Yenilemek için aşağıya çekin...";
+
+"Release to refresh..." = "Yenilemek için bırakın...";
+
+"Last Updated: %@" = "Son güncelleme: %@";
+
+"Required" = "Gerekli";
+
+"Optional" = "İsteğe Bağlı";
+
+"Fullscreen" = "Tam Ekran";
+
+"Close" = "Kapat";
+
+
+/*
+ * Settings
+ */
+
+"Settings" = "Ayarlar";
+
+"RememberMe" = "Beni hatırla";
+
+"AutoLogin" = "Otomatik oturum aç";
+
+"KeepSelectedStream" = "Filtremi hatırla";
+
+"ShowPrivateDrive" = "Kişisel sürücümü göster";
+
+"Language" = "Diller";
+
+"English" = "İngilizce";
+
+"French" = "Fransızca";
+
+"German" = "Almanca";
+
+"Spanish" = "İspanyolca";
+
+"Send" = "Gönder";
+
+"ServerList" = "Sunucu Listesi";
+
+"NewServer" = "Yeni sunucu";
+
+"ServerModify" = "Sunucuyu Değiştir";
+
+"ApplicationsInformation" = "Uygulama Bilgileri";
+
+"ServerVersion" = "Sunucu Sürümü";
+
+"ApplicationEdition" = "Uygulama Sürümü";
+
+"ApplicationVersion" = "Uygulama Sürümü";
+
+"ServerName" = "Sunucu adı";
+
+"ServerUrl" = "Sunucu URL'si";
+
+
+/*
+ * Errors & Warnings
+ */
+
+"BadResponse" = "Sunucu geçersiz veri döndürdü.";
+
+"NetworkConnection" = "Bağlantı hatası";
+
+"Authorization" = "Oturum açma başarısız oldu";
+
+"WrongUserNamePassword" = "Bağlanmak imkansız, kullanıcı adınızı ve şifrenizi kontrol edin";
+
+"InvalidServer" = "Intranetinize bağlanmka imkansız, lütfen URL adresini kontrol edin veya yöneticinize başvurun";
+
+"NetworkConnectionFailed" = "Intranetinize bağlanmka imkansız, lütfen URL adresini kontrol edin veya yöneticinize başvurun";
+
+"UserNameEmpty" = "Hatalı kullanıcı adı";
+
+"PasswordEmpty" = "Hatalı şifre";
+
+"SelectedDomainEmpty" = "Belirtilen sunucu yok";
+
+"EmptyFolder" = "Bu klasör boş";
+
+"UnreadableFile" = "Bu dosya uygulamada açılamıyor";
+
+"NoActivities" = "Etkinlik akışınıza hiçbir etkinlik gönderilmemiş";
+
+"NoGadget" = "Uygulamalarınızda herhangi bir gadget yok";
+
+"MessageInfo" = "Bilgi";
+
+"MessageErrorServer" = "Adı veya URL'si boş bir sunucu ekleyemezsiniz";
+
+"MessageErrorExist" = "Bu sunucu zaten var";
+
+"InvalidUrl" = "Geçersiz URL";
+
+"FileError" = "Hata";
+
+"CameraNotAvailable" = "Kamera kullanılamıyor";
+
+"GadgetsCannotBeRetrieved" = "Gedgetler alınamıyor";
+
+"Error" = "Hata";
+
+"NoMessageComment" = "Yorum yapmak için bir metin girmelisiniz";
+
+"NoMessagePosting" = "İleti atmak için bir metin girmelisiniz";
+
+"GettingActionCannotBeCompleted" = "Etkinlikleri alamzsınız";
+
+"UpdatingActionCannotBeCompleted" = "Etkinliği güncelleştiremezsiniz";
+
+"LikingActionCannotBeCompleted" = "Etkinliği beğenemezsiniz";
+
+"UnLikeActionCannotBeCompleted" = "Etkinliği beğenmedim yapamazsınız";
+
+"PostingActionCannotBeCompleted" = "İleti gönderemezsiniz";
+
+"CommentActionCannotBeCompleted" = "Yorum gönderemezsiniz";
+
+"LoadMoreActionCannotBeCompleted" = "Etkinlikler yeniden yüklenirken bir hata oluştu.";
+
+"NotCompliant" = "Uygulama platformun bu sürümünde çalıştırılamaz";
+
+"SpecialCharacters" = "Özel karakterlere izin verilmez";
+
+"DashboardsCannotBeRetrieved" = "Panolar alınamıyor";
+
+"FolderNameAlreadyExist" = "Klasör zaten var";
+
+"FolderNameEmpty" = "Klasör adı yok";
+
+"Cannot move file to its location" = "Dosyayı aynı konuma taşıyamazsınız";
+
+"Cannot transfer file" = "Dosya transfer edemez";
+
+
+/*
+ * Apps
+ */
+
+"Dashboard" = "Uygulamalar";
+
+
+/*
+ * Activity stream
+ */
+
+"numOfLikers" = "%d beğenen";
+
+"numOfLiker" = "%d beğenen";
+
+"likeThisActivity" = "%d kişi bunu beğendi";
+
+"NoOneLikeThis" = "Hiç kimse bunu beğenmemiş";
+
+"ActivityDetails" = "Etkinlik ayrıntıları";
+
+"MessageComposer" = "İleti Uluşturucu";
+
+"ActivityStream" = "Etkinlik Akışı";
+
+"News" = "Haberler";
+
+"Details" = "Ayrıntılar";
+
+"comments(%d)" = "Yorumlar(%d)";
+
+"likes(%d)" = "Beğenenler(%d)";
+
+"YourComment" = "Yorumunuz";
+
+"GettingActivity" = "Etkinlik alınıyor";
+
+"UpdatingActivity" = "Etkinlik güncelleştiriliyor";
+
+"PostingActivity" = "Mesaj";
+
+"CommentActivity" = "Yorum";
+
+"GettingActivityDetail" = "Etkinlik ayrıntısı alınıyor";
+
+"UpdatingActivityDetail" = "Etkinlik ayrıntısı güncelleştiriliyor";
+
+"EditWiki" = "Wiki sayfası düzenledi:";
+
+"CreateWiki" = "Wiki sayfası oluşturdu:";
+
+"NewPost" = "Yeni bir yazı ekledi:";
+
+"UpdatePost" = "Bir yazıyı güncelledi:";
+
+"NewTopic" = "Yeni bir konu yayınladı:";
+
+"UpdateTopic" = "Bir konuyu güncelledi:";
+
+"UpdateQuestion" = "Soru güncelleştirdi:";
+
+"Answered" = "Sorusuna yanıt verdi:";
+
+"Asked" = "Bir soru sordu:";
+
+"EventAdded" = "Bir etkinlik ekledi:";
+
+"EventUpdated" = "Az önce bir etkinliği güncelledi:";
+
+"TaskAdded" = "Bir görev ekledi:";
+
+"TaskUpdated" = "Az önce bir görev güncelledi:";
+
+"Description" = "Açıklama";
+
+"Location" = "Yer";
+
+"StartTime" = "Başlangıç Saati";
+
+"EndTime" = "Bitiş Saati";
+
+"NoComment" = "Kimse yorumlamadı , ilk yorumlayan sen ol";
+
+"Image Preview" = "Resim önizleme";
+
+"Change" = "Değiştir";
+
+"Remove" = "Kaldır";
+
+"All Updates" = "Tüm Güncelleştirmeler";
+
+"My Connections" = "Bağlantılarım";
+
+"My Spaces" = "Alanlarım";
+
+"My Status" = "Durumum";
+
+
+/*
+ * Date message converter
+ */
+
+"Today" = "Bugün";
+
+"DateFmt" = "%1$@%2$@%3$@%4$@";
+
+ //in english, Order of the message: modifier - number - measure - direction
+ //in french, Order of the message: direction - modifier - number - measure
+
+"DateFmt ago" = "önce";
+
+"DateFmt from now" = "Şu andan itibaren";
+
+"DateFmt Less than" = "Daha az ";
+
+"DateFmt About" = "Hakkında ";
+
+"DateFmt Over" = "Üzerinde ";
+
+"DateFmt Almost" = "Neredeyse ";
+
+"DateFmt seconds" = " saniye ";
+
+"DateFmt minute" = " dakika ";
+
+"DateFmt minutes" = " dakika ";
+
+"DateFmt hour" = " saat ";
+
+"DateFmt hours" = " saat ";
+
+"DateFmt day" = " gün ";
+
+"DateFmt days" = " gün ";
+
+"DateFmt month" = " ay ";
+
+"DateFmt months" = " ay ";
+
+"DateFmt year" = " yıl ";
+
+"DateFmt years" = " yıl ";
+
+
+/*
+ * Cloud sign up assistant 
+ */
+"ServerNotAvailable" = "Intranetinize bağlanmka imkansız, lütfen URL adresini kontrol edin veya yöneticinize başvurun";
+
+"AccountAlreadyExists" = "Bu e-posta için bir hesap zaten var, giriş ekranına yönlendirileceksiniz";
+
+"NumberUsersExceed" = " Yeni bir hesap oluşturmak mümkün değil. Intranetiniz için en fazla kullanıcı sayısı ulaşıldı, yöneticinize başvurun";
+
+"StartTheConfigurationAssistant" = "Kayıt yardımcısını başlat";
+
+"eXoCloudConfigurationAssistant" = "eXo";
+
+"ServiceUnavailable" = "Intranetinize bağlanmka imkansız, lütfen URL adresini kontrol edin veya yöneticinize başvurun";
+
+"EmailIsBlacklisted" = "Kaydolmak için lütfen kurum e-postasını kullanın";
+
+"NumberOfUsersExceed" = "Yeni bir hesap oluşturmak mümkün değil. Intranetiniz için en fazla kullanıcı sayısı ulaşıldı, yöneticinize başvurun";
+
+"IncorrectEmailFormat" = "Lütfen geçerli e-posta adresi girin";
+
+"IncorrectPassword" = "Bağlanmak imkansız, şifrenizi kontrol edin";
+
+"UserNotExist" = " Bu e-postanın hesabı yoktur, e-postanızı kontroledin  veya kayıt olun";
+
+"TenantNotExist" = "Bu e-postanın hesabı yoktur, e-postanızı kontroledin  veya kayıt olun";
+
+"TenantResuming" = "Intranet geri yüklüyoruz,lütfen birkaç dakika içinde yeniden deneyin";
+
+"TenantCreation" = "Intranetinizi oluşturuyoruz. Bizden gelecek olan  hoş geldiniz e-postasını aldığınızda lütfen geri gelin";
+
+"Username" = "Kullanıcı Adı";
+
+"Password" = "Şifre";
+
+"Your credentials" = "Kimlik bilgileriniz";
+
+"EnterServerUrl" = "Intranet URL'sini girin";
+
+"EnterCredentials" = "Kimlik bilgilerinizi girin  ve oturum açın";
+
+"My intranet" = "Intranetim";
+
+"SignupInternalServerError" = "Intranetiniz için en fazla kullanıcı sayısı ulaşıldı, yöneticinize başvurun";
+
+"NoTenantName" = "Kiracı adı yok";

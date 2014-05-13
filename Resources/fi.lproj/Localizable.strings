@@ -135,7 +135,6 @@
 
 "ServerUrl" = "Server URL";
 
-"Social" = "Social";
 
 /*
  * Errors & Warnings
@@ -243,7 +242,7 @@
 
 "News" = "News";
 
-"Details" = "Details";
+"Details" = "Tarkemmat tiedot";
 
 "comments(%d)" = "Comments(%d)";
 
@@ -291,7 +290,7 @@
 
 "Description" = "Description";
 
-"Location" = "Location";
+"Location" = "Sijainti";
 
 "StartTime" = "Start time";
 
@@ -318,7 +317,7 @@
  * Date message converter
  */
 
-"Today" = "Today";
+"Today" = "Tänään";
 
 "DateFmt" = "%1$@%2$@%3$@%4$@";
 
@@ -373,7 +372,7 @@
 
 "eXoCloudConfigurationAssistant" = "eXo";
 
-"ServiceUnavailable" = "Impossible to connect to your intranet, please check its URL or contact your administrator" ;
+"ServiceUnavailable" = "Impossible to connect to your intranet, please check its URL or contact your administrator";
 
 "EmailIsBlacklisted" = "Please use your company email to sign up";
 
@@ -401,7 +400,7 @@
 
 "EnterCredentials" = "Enter your credentials and Login";
 
-"My intranet" = "My Intranet";
+"My intranet" = "My intranet";
 
 "SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
 

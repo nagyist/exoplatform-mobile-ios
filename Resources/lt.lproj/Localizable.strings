@@ -1,0 +1,407 @@
+/* 
+  Localizable.strings
+  eXo Platform
+
+  Created by Le Thanh Quang on 7/9/12.
+  Copyright (c) 2012 eXoPlatform. All rights reserved.
+*/
+
+/*
+ * Authenticate
+ */
+
+"SignInPageTitle" = "Prisijungimo puslapis";
+
+"SignInButton" = "Prisijungti";
+
+"UsernamePlaceholder" = "Vartotojo vardas";
+
+"PasswordPlaceholder" = "Slaptažodis";
+
+
+/* 
+ * Documents
+ */
+
+"TakePicture" = "Nufotografuoti";
+
+"NewFolderTitle" = "Naujas aplankas";
+
+"RenameTitle" = "Pervadinti";
+
+"Copy" = "Kopijuoti";
+
+"Move" = "Iškirpti";
+
+"Paste" = "Įklijuoti";
+
+"Documents" = "Dokumentai";
+
+"TakeAPicture" = "Nufotografuoti";
+
+"AttachedPhoto" = "Prisegta nuotrauka";
+
+"AddAPhoto" = "Pridėti nuotrauką";
+
+"PhotoLibrary" = "Nuotraukų albumas";
+
+// Drives types
+
+"general" = "bendras";
+
+"personal" = "asmeninis";
+
+"group" = "grupė";
+
+
+/*
+ * General
+ */
+
+"Cancel" = "Atšaukti";
+
+"DoneButton" = "Atlikta";
+
+"Delete" = "Ištrinti";
+
+"Success" = "Sėkmingai";
+
+"Home" = "Pagrindinis";
+
+"Loading" = "Kraunama...";
+
+"LoadingURL" = "Kraunamas URL";
+
+"OK" = "Gerai";
+
+"Disconnect" = "Atsijungti";
+
+"Pull down to refresh..." = "Patraukite žemyn atnaujinti...";
+
+"Release to refresh..." = "Atleiskite atnaujinti...";
+
+"Last Updated: %@" = "Paskutinis atnaujinimas: %@";
+
+"Required" = "Reikalinga";
+
+"Optional" = "Pasirinktinas";
+
+"Fullscreen" = "Per visą ekraną";
+
+"Close" = "Uždaryti";
+
+
+/*
+ * Settings
+ */
+
+"Settings" = "Nustatymai";
+
+"RememberMe" = "Remember me";
+
+"AutoLogin" = "Auto login";
+
+"KeepSelectedStream" = "Atsiminti mano filtrą";
+
+"ShowPrivateDrive" = "Rodyti mano privatų diską";
+
+"Language" = "Kalbos";
+
+"English" = "Anglų";
+
+"French" = "Prancūzų";
+
+"German" = "Vokiečių";
+
+"Spanish" = "Ispanų";
+
+"Send" = "Siųsti";
+
+"ServerList" = "Serverių sąrašas";
+
+"NewServer" = "Naujas serveris";
+
+"ServerModify" = "Redaguoti serverį";
+
+"ApplicationsInformation" = "Programos informacija";
+
+"ServerVersion" = "Serverio versija";
+
+"ApplicationEdition" = "Programos leidinys";
+
+"ApplicationVersion" = "Programos versija";
+
+"ServerName" = "Serverio pavadinimas";
+
+"ServerUrl" = "Serverio URL";
+
+
+/*
+ * Errors & Warnings
+ */
+
+"BadResponse" = "Serveris grąžino klaidingus duomenis.";
+
+"NetworkConnection" = "Prisijungimo klaida";
+
+"Authorization" = "Nepavyko prisijungti";
+
+"WrongUserNamePassword" = "Neįmanoma prisijungti, patikrinkite savo vartotojo vardą ir slaptažodį";
+
+"InvalidServer" = "Neįmanoma prisijungti prie intraneto, prašome patikrinti savo URL arba kreipkitės į administratorių";
+
+"NetworkConnectionFailed" = "Neįmanoma prisijungti prie intraneto, prašome patikrinti savo URL arba kreipkitės į administratorių";
+
+"UserNameEmpty" = "Neteisingas vartotojo vardas";
+
+"PasswordEmpty" = "Neteisingas slaptažodis";
+
+"SelectedDomainEmpty" = "Nėra nurodyto serverio";
+
+"EmptyFolder" = "Šis aplankas yra tuščias";
+
+"UnreadableFile" = "Šis failas negali būti atidarytas programoje";
+
+"NoActivities" = "Jokia veikla nebuvo pastebėta jūsų veiklos sraute";
+
+"NoGadget" = "Jūs neturite įtaisų savo programose";
+
+"MessageInfo" = "Informacija";
+
+"MessageErrorServer" = "Jūs negalite pridėti serverio su tuščiu pavadinimu arba URL";
+
+"MessageErrorExist" = "Šis serveris jau egzistuoja";
+
+"InvalidUrl" = "Klaidingas URL";
+
+"FileError" = "Klaida";
+
+"CameraNotAvailable" = "Kamera negalima";
+
+"GadgetsCannotBeRetrieved" = "Negalima rasti įtaisų";
+
+"Error" = "Klaida";
+
+"NoMessageComment" = "Jūs turite įvesti šiek tiek teksto, kad galėtumėte komentuoti";
+
+"NoMessagePosting" = "Jūs turite įvesti šiek tiek teksto, kad galėtumėte siųsti";
+
+"GettingActionCannotBeCompleted" = "Jūs negalite gauti veiklos";
+
+"UpdatingActionCannotBeCompleted" = "Jūs negalite atnaujinti veiklos";
+
+"LikingActionCannotBeCompleted" = "Jūs negalite įvertinti veiklos";
+
+"UnLikeActionCannotBeCompleted" = "Jūs negalite neigiamai įvertinti veiklos";
+
+"PostingActionCannotBeCompleted" = "Jūs negalite rašyti žinutės";
+
+"CommentActionCannotBeCompleted" = "Jūs negalite rašyti komentaro";
+
+"LoadMoreActionCannotBeCompleted" = "Įvyko klaida, veikla yra perkraunama.";
+
+"NotCompliant" = "Programa negali veikti šioje platformos laidoje";
+
+"SpecialCharacters" = "Specialūs simboliai neleidžiami";
+
+"DashboardsCannotBeRetrieved" = "Negalima rasti prietaisų skydų";
+
+"FolderNameAlreadyExist" = "Šis aplankas jau egzistuoja";
+
+"FolderNameEmpty" = "Aplanko pavadinimas yra tuščias";
+
+"Cannot move file to its location" = "Negalima perkelti failo į tą pačią vietą";
+
+"Cannot transfer file" = "Negalima persiųsti failo";
+
+
+/*
+ * Apps
+ */
+
+"Dashboard" = "Programos";
+
+
+/*
+ * Activity stream
+ */
+
+"numOfLikers" = "%d mėgėjų";
+
+"numOfLiker" = "%d mėgėjas";
+
+"likeThisActivity" = "%d žmonių patinka tai";
+
+"NoOneLikeThis" = "Tai niekam nepatinka ";
+
+"ActivityDetails" = "Veiklos duomenys";
+
+"MessageComposer" = "Pranešimo kūrėjas";
+
+"ActivityStream" = "Veiklos srautas";
+
+"News" = "Naujienos";
+
+"Details" = "Išsamiai";
+
+"comments(%d)" = "Komentarai(%d)";
+
+"likes(%d)" = "Įvertinimai(%d)";
+
+"YourComment" = "Jūsų komentaras";
+
+"GettingActivity" = "Gaunama veiklos";
+
+"UpdatingActivity" = "Atnaujinama veikla";
+
+"PostingActivity" = "Siųsti";
+
+"CommentActivity" = "Komentaras";
+
+"GettingActivityDetail" = "Gaunama išsami veiklos informacija";
+
+"UpdatingActivityDetail" = "Atnaujinama veiklos informacija";
+
+"EditWiki" = "redagavo Wiki puslapį:";
+
+"CreateWiki" = "sukūrė Wiki puslapį:";
+
+"NewPost" = "pridėjo naują pranešimą:";
+
+"UpdatePost" = "atnaujino pranešimą:";
+
+"NewTopic" = "sukūrė naują temą:";
+
+"UpdateTopic" = "atnaujino temą:";
+
+"UpdateQuestion" = "atnaujino klausimą:";
+
+"Answered" = "atsakė į klausimą:";
+
+"Asked" = "paklausė:";
+
+"EventAdded" = "pridėjo įvykį:";
+
+"EventUpdated" = "atnaujino įvykį:";
+
+"TaskAdded" = "pridėjo užduotį:";
+
+"TaskUpdated" = "atnaujino užduotį:";
+
+"Description" = "Aprašymas";
+
+"Location" = "Vieta";
+
+"StartTime" = "Pradžios laikas";
+
+"EndTime" = "Pabaigos laikas";
+
+"NoComment" = "Dar niekas nekomentavo, būkite pirmi";
+
+"Image Preview" = "Paveikslėlio peržiūra";
+
+"Change" = "Pakeisti";
+
+"Remove" = "Pašalinti";
+
+"All Updates" = "Visi atnaujinimai";
+
+"My Connections" = "Mano jungtys";
+
+"My Spaces" = "Mano erdvės";
+
+"My Status" = "Mano būsena";
+
+
+/*
+ * Date message converter
+ */
+
+"Today" = "Šiandien";
+
+"DateFmt" = "%1$@%2$@%3$@%4$@";
+
+ //in english, Order of the message: modifier - number - measure - direction
+ //in french, Order of the message: direction - modifier - number - measure
+
+"DateFmt ago" = "prieš";
+
+"DateFmt from now" = "nuo šiol";
+
+"DateFmt Less than" = "mažiau nei ";
+
+"DateFmt About" = "Apie ";
+
+"DateFmt Over" = "Per ";
+
+"DateFmt Almost" = "Beveik ";
+
+"DateFmt seconds" = " sekundes(-ių) ";
+
+"DateFmt minute" = " minutė ";
+
+"DateFmt minutes" = " minutes(-ių) ";
+
+"DateFmt hour" = " valanda ";
+
+"DateFmt hours" = " valandos(-ų) ";
+
+"DateFmt day" = " diena ";
+
+"DateFmt days" = " dienas(-ų)";
+
+"DateFmt month" = " mėnuo ";
+
+"DateFmt months" = " mėnesius(-ių) ";
+
+"DateFmt year" = " metai ";
+
+"DateFmt years" = " metus(-ų) ";
+
+
+/*
+ * Cloud sign up assistant 
+ */
+"ServerNotAvailable" = "Neįmanoma prisijungti prie intraneto, prašome patikrinti savo URL arba kreipkitės į administratorių";
+
+"AccountAlreadyExists" = "An account already exists for this email, you will be redirected to the login screen";
+
+"NumberUsersExceed" = " Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"StartTheConfigurationAssistant" = "Start the sign-up assistant";
+
+"eXoCloudConfigurationAssistant" = "eXo";
+
+"ServiceUnavailable" = "Neįmanoma prisijungti prie intraneto, prašome patikrinti savo URL arba kreipkitės į administratorių";
+
+"EmailIsBlacklisted" = "Please use your company email to sign up";
+
+"NumberOfUsersExceed" = "Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"IncorrectEmailFormat" = "Please input a valid email address";
+
+"IncorrectPassword" = "Impossible to connect, check your password";
+
+"UserNotExist" = " No account exists for this email, check your email or signup";
+
+"TenantNotExist" = "No account exists for this email, check your email or signup";
+
+"TenantResuming" = "We are restoring your intranet, please retry in few minutes";
+
+"TenantCreation" = "We are creating your intranet. Please come back when you receive our welcome email";
+
+"Username" = "Vartotojo vardas";
+
+"Password" = "Slaptažodis";
+
+"Your credentials" = "Your credentials";
+
+"EnterServerUrl" = "Enter the URL of your intranet";
+
+"EnterCredentials" = "Enter your credentials and Login";
+
+"My intranet" = "My intranet";
+
+"SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"NoTenantName" = "There is no tenant name";

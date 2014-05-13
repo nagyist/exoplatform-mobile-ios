@@ -1,0 +1,407 @@
+/* 
+  Localizable.strings
+  eXo Platform
+
+  Created by Le Thanh Quang on 7/9/12.
+  Copyright (c) 2012 eXoPlatform. All rights reserved.
+*/
+
+/*
+ * Authenticate
+ */
+
+"SignInPageTitle" = "Страница Входа";
+
+"SignInButton" = "Авторизация";
+
+"UsernamePlaceholder" = "Имя пользователя";
+
+"PasswordPlaceholder" = "Пароль";
+
+
+/* 
+ * Documents
+ */
+
+"TakePicture" = "Сделать снимок";
+
+"NewFolderTitle" = "Новая папка";
+
+"RenameTitle" = "Переименовать";
+
+"Copy" = "Копировать";
+
+"Move" = "Вырезать";
+
+"Paste" = "Вставить";
+
+"Documents" = "Документы";
+
+"TakeAPicture" = "Сделать снимок";
+
+"AttachedPhoto" = "Вложенное фото";
+
+"AddAPhoto" = "Добавить фотографию";
+
+"PhotoLibrary" = "Фотоальбом";
+
+// Drives types
+
+"general" = "общее";
+
+"personal" = "личное";
+
+"group" = "групповое";
+
+
+/*
+ * General
+ */
+
+"Cancel" = "Отмена";
+
+"DoneButton" = "Готово";
+
+"Delete" = "Удалить";
+
+"Success" = "Действие выполнено успешно";
+
+"Home" = "Главная";
+
+"Loading" = "Загрузка...";
+
+"LoadingURL" = "Загрузка URL";
+
+"OK" = "ОК";
+
+"Disconnect" = "Отключиться";
+
+"Pull down to refresh..." = "Потяните вниз, чтобы обновить...";
+
+"Release to refresh..." = "Отпустите, чтобы обновить...";
+
+"Last Updated: %@" = "Последнее обновление: %@";
+
+"Required" = "Требуется";
+
+"Optional" = "Опционально";
+
+"Fullscreen" = "Полноэкранный режим";
+
+"Close" = "Закрыть";
+
+
+/*
+ * Settings
+ */
+
+"Settings" = "Настройки";
+
+"RememberMe" = "Запомнить меня";
+
+"AutoLogin" = "Автоматический вход";
+
+"KeepSelectedStream" = "Запомнить мой фильтр";
+
+"ShowPrivateDrive" = "Показать мой приватный диск";
+
+"Language" = "Языки";
+
+"English" = "Английский";
+
+"French" = "Французский";
+
+"German" = "Немецкий";
+
+"Spanish" = "Испанский";
+
+"Send" = "Отправить";
+
+"ServerList" = "Список серверов";
+
+"NewServer" = "Новый сервер";
+
+"ServerModify" = "Модифицировать сервер";
+
+"ApplicationsInformation" = "Сведения о приложении";
+
+"ServerVersion" = "Версия сервера";
+
+"ApplicationEdition" = "Редакция приложения";
+
+"ApplicationVersion" = "Версия приложения";
+
+"ServerName" = "Имя сервера";
+
+"ServerUrl" = "URL-адрес сервера";
+
+
+/*
+ * Errors & Warnings
+ */
+
+"BadResponse" = "Сервер вернул недопустимые данные.";
+
+"NetworkConnection" = "Ошибка соединения";
+
+"Authorization" = "Вход не выполнен";
+
+"WrongUserNamePassword" = "Невозможно подключиться, проверьте имя пользователя и пароль";
+
+"InvalidServer" = "Невозможно подключиться к внутренней сети, проверьте URL-адрес или обратитесь к администратору";
+
+"NetworkConnectionFailed" = "Невозможно подключиться к внутренней сети, проверьте URL-адрес или обратитесь к администратору";
+
+"UserNameEmpty" = "Неверное имя пользователя";
+
+"PasswordEmpty" = "Неверный пароль";
+
+"SelectedDomainEmpty" = "Сервер не указан";
+
+"EmptyFolder" = "Эта папка пуста";
+
+"UnreadableFile" = "Этот файл не может быть открыт в приложении";
+
+"NoActivities" = "Вы еще ничего не опубликовали в своей ленте активности";
+
+"NoGadget" = "В ваших Приложениях нет гаджетов";
+
+"MessageInfo" = "Информация";
+
+"MessageErrorServer" = "Невозможно добавить сервер без названия или URL-адреса";
+
+"MessageErrorExist" = "Этот сервер уже существует";
+
+"InvalidUrl" = "Недопустимый URL-адрес";
+
+"FileError" = "Ошибка";
+
+"CameraNotAvailable" = "Камера не доступна";
+
+"GadgetsCannotBeRetrieved" = "Не удается получить гаджеты";
+
+"Error" = "Ошибка";
+
+"NoMessageComment" = "Вы должны ввести текст, чтобы прокомментировать";
+
+"NoMessagePosting" = "Вы должны ввести текст для опубликования";
+
+"GettingActionCannotBeCompleted" = "Вы не можете получать деятельность";
+
+"UpdatingActionCannotBeCompleted" = "Вы не можете обновлять деятельность";
+
+"LikingActionCannotBeCompleted" = "Вы не можете ставить лайки деятельности";
+
+"UnLikeActionCannotBeCompleted" = "Вы не можете убирать лайки с деятельности";
+
+"PostingActionCannotBeCompleted" = "Вы не можете публиковать сообщения";
+
+"CommentActionCannotBeCompleted" = "Вы не можете оставлять комментарии";
+
+"LoadMoreActionCannotBeCompleted" = "Произошла ошибка, перезагрузка деятельности.";
+
+"NotCompliant" = "Приложение не может работать на редакции Платформы";
+
+"SpecialCharacters" = "Нельзя использовать специальные символы";
+
+"DashboardsCannotBeRetrieved" = "Не удается получить панели мониторинга";
+
+"FolderNameAlreadyExist" = "Эта папка уже существует";
+
+"FolderNameEmpty" = "Папка не имеет названия";
+
+"Cannot move file to its location" = "Нельзя переместить файл на то же место";
+
+"Cannot transfer file" = "Не удается передать файл";
+
+
+/*
+ * Apps
+ */
+
+"Dashboard" = "Приложения";
+
+
+/*
+ * Activity stream
+ */
+
+"numOfLikers" = "%d лайкеры";
+
+"numOfLiker" = "%d лайкер";
+
+"likeThisActivity" = "%d людям это нравится";
+
+"NoOneLikeThis" = "Никому это не понравилось";
+
+"ActivityDetails" = "Детальное описание деятельности";
+
+"MessageComposer" = "Компоновщик сообщений";
+
+"ActivityStream" = "Лента активности";
+
+"News" = "Новости";
+
+"Details" = "Подробная информация";
+
+"comments(%d)" = "Комментарии(%d)";
+
+"likes(%d)" = "\"Лайки\"(%d)";
+
+"YourComment" = "Ваш комментарий";
+
+"GettingActivity" = "Получение деятельности";
+
+"UpdatingActivity" = "Обновление деятельности";
+
+"PostingActivity" = "Разместить";
+
+"CommentActivity" = "Комментировать";
+
+"GettingActivityDetail" = "Получение детального описания деятельности";
+
+"UpdatingActivityDetail" = "Обновление детального описания деятельности";
+
+"EditWiki" = "отредактировал(а) Вики-страницу:";
+
+"CreateWiki" = "создал(а) Вики-страницу:";
+
+"NewPost" = "добавил(а) новое сообщение:";
+
+"UpdatePost" = "обновил(а) сообщение:";
+
+"NewTopic" = "опубликовал(а) новую тему:";
+
+"UpdateTopic" = "обновил(а) тему:";
+
+"UpdateQuestion" = "обновил(а) вопрос:";
+
+"Answered" = "ответил(а) на вопрос:";
+
+"Asked" = "спросил(а):";
+
+"EventAdded" = "добавил(а) событие:";
+
+"EventUpdated" = "только что обновил(а) событие:";
+
+"TaskAdded" = "добавил(а) задачу:";
+
+"TaskUpdated" = "только что обновил(а) задачу:";
+
+"Description" = "Описание";
+
+"Location" = "Местоположение";
+
+"StartTime" = "Время начала";
+
+"EndTime" = "Время окончания";
+
+"NoComment" = "Пока нет комментариев, прокомментируйте первым";
+
+"Image Preview" = "Предпросмотр изображения";
+
+"Change" = "Изменить";
+
+"Remove" = "Удалить";
+
+"All Updates" = "Все обновления";
+
+"My Connections" = "Мои контакты";
+
+"My Spaces" = "Мои области";
+
+"My Status" = "Мой статус";
+
+
+/*
+ * Date message converter
+ */
+
+"Today" = "Сегодня";
+
+"DateFmt" = "%1$@%2$@%3$@%4$@";
+
+ //in english, Order of the message: modifier - number - measure - direction
+ //in french, Order of the message: direction - modifier - number - measure
+
+"DateFmt ago" = "назад";
+
+"DateFmt from now" = "с этого момента";
+
+"DateFmt Less than" = "Менее, чем ";
+
+"DateFmt About" = "Около ";
+
+"DateFmt Over" = "Более, чем ";
+
+"DateFmt Almost" = "Почти ";
+
+"DateFmt seconds" = " секунд ";
+
+"DateFmt minute" = " минуту ";
+
+"DateFmt minutes" = " минут ";
+
+"DateFmt hour" = " час ";
+
+"DateFmt hours" = " часов ";
+
+"DateFmt day" = " день ";
+
+"DateFmt days" = " дней ";
+
+"DateFmt month" = " месяц ";
+
+"DateFmt months" = " месяцев ";
+
+"DateFmt year" = " год ";
+
+"DateFmt years" = " лет ";
+
+
+/*
+ * Cloud sign up assistant 
+ */
+"ServerNotAvailable" = "Невозможно подключиться к внутренней сети, проверьте URL-адрес или обратитесь к администратору";
+
+"AccountAlreadyExists" = "Учетная запись уже существует для этой электронной почты, вы будете перенаправлены на страницу входа в систему";
+
+"NumberUsersExceed" = " Невозможно создать новую учетную запись. Достигнуто максимальное количество пользователей для вашей сети, обратитесь к администратору";
+
+"StartTheConfigurationAssistant" = "Запустить помощник регистраций";
+
+"eXoCloudConfigurationAssistant" = "eXo";
+
+"ServiceUnavailable" = "Невозможно подключиться к сети, проверьте его URL-адрес или обратитесь к администратору";
+
+"EmailIsBlacklisted" = "Чтобы зарегистрироваться, пожалуйста, используйте адрес электронной почты вашей компании";
+
+"NumberOfUsersExceed" = "Impossible to create a new account. The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"IncorrectEmailFormat" = "Пожалуйста, введите действительный E-mail";
+
+"IncorrectPassword" = "Невозможно подключиться, проверьте ваш пароль";
+
+"UserNotExist" = " Учетная запись не существует для этой электронной почты, проверьте адрес электронной почты или зарегистрируйтесь";
+
+"TenantNotExist" = "Учетная запись не существует для этой электронной почты, проверьте адрес электронной почты или зарегистрируйтесь";
+
+"TenantResuming" = "Мы восстанавливаем сеть, повторите попытку через несколько минут";
+
+"TenantCreation" = "Мы создаем Вашу внутреннюю сеть. Пожалуйста, приходите, когда получите наше письмо с приветствием";
+
+"Username" = "Имя пользователя";
+
+"Password" = "Пароль";
+
+"Your credentials" = "Ваши учетные данные";
+
+"EnterServerUrl" = "Введите URL-адрес Вашей внутренней сети";
+
+"EnterCredentials" = "Введите ваши учетные данные и войдите";
+
+"My intranet" = "My intranet";
+
+"SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
+
+"NoTenantName" = "Нет имени арендатора";

@@ -135,7 +135,6 @@
 
 "ServerUrl" = "Server URL";
 
-"Social" = "Social";
 
 /*
  * Errors & Warnings
@@ -373,7 +372,7 @@
 
 "eXoCloudConfigurationAssistant" = "eXo";
 
-"ServiceUnavailable" = "Impossible to connect to your intranet, please check its URL or contact your administrator" ;
+"ServiceUnavailable" = "Impossible to connect to your intranet, please check its URL or contact your administrator";
 
 "EmailIsBlacklisted" = "Please use your company email to sign up";
 
@@ -391,9 +390,9 @@
 
 "TenantCreation" = "We are creating your intranet. Please come back when you receive our welcome email";
 
-"Username" = "Username";
+"Username" = "ユーザ名";
 
-"Password" = "Password";
+"Password" = "パスワード";
 
 "Your credentials" = "Your credentials";
 
@@ -401,7 +400,7 @@
 
 "EnterCredentials" = "Enter your credentials and Login";
 
-"My intranet" = "My Intranet";
+"My intranet" = "My intranet";
 
 "SignupInternalServerError" = "The maximum number of users has been reached for your intranet, please contact your administrator";
 
